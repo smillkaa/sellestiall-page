@@ -79,9 +79,13 @@ a:hover {
     left: -30px;
     font-size: 20px;
     line-height: 1;
-    background-color: black;
     padding: 20px 0;
 }
+
+.on-page:hover {
+    color: white;
+}
+
 
 .on-page-2 {
     position: relative;
@@ -90,7 +94,7 @@ a:hover {
 
 .gallery-container-main {
     position: relative;
-    top: -165px;
+    top: -300px;
 }
 
 .gallery-container-main img {
@@ -107,7 +111,11 @@ a:hover {
     height: auto;
 }
 
-span {
+.gallery-container-3 {
+    margin-top: 300px;
+}
+
+.red-text {
     font-family: 'D-DIN';
     font-size: 17px;
     letter-spacing: 2px;
