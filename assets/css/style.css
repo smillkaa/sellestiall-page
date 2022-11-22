@@ -92,10 +92,6 @@ a:hover {
 }
 
 
-.on-page-2 {
-    position: relative;
-    left: -30px;
-}
 
 .gallery-container-main {
     position: relative;
@@ -122,9 +118,9 @@ a:hover {
 
 .red-text {
     font-family: 'D-DIN';
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 2px;
-    color: rgb(120, 0, 0);
+    color: rgb(123, 0, 0);
 }
 
 footer a {
