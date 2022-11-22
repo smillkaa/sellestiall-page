@@ -28,10 +28,6 @@ a {
     max-width: max-content;
 }
 
-h1 {
-    color: white;
-}
-
 main {
     height: 90vh;
     background-size: cover;
@@ -47,13 +43,18 @@ main {
 
 h1 {
     letter-spacing: 2px;
+    font-family: 'Archia';
+    font-size: 1.2rem;
+    color: white;
+    max-width: max-content;
+}
+
+.h1-position {
     position: relative;
     bottom: 245px;
     left: 150px;
     z-index: 1;
-    font-family: 'Archia';
-    font-size: 1.2rem;
-    
+    max-width: max-content;
 }
 
 .intro {
@@ -80,6 +81,10 @@ a:hover {
     font-size: 20px;
     line-height: 1;
     padding: 20px 0;
+}
+
+.on-page span {
+    background-color: black;
 }
 
 .on-page:hover {
@@ -139,4 +144,129 @@ footer p {
     color: rgb(100, 100, 100);
     font-size: 12px;
     font-family: 'D-DIN', 'Times New Roman';
+}
+
+.mobile-front-pic img {
+    max-width: 100vw;
+    height: auto;
+}
+
+.mobile-front-pic {
+    position: relative;
+    bottom: 50px;
+}
+
+.copyright {
+    text-align: right;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+        z-index: 1;
+        padding: 70px 20px 0 0;
+        font-size:15px;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    main {
+        min-height: 100%;
+        width: auto;
+    }
+    /* .logo {
+        max-width: 250px;
+        max-height: auto;
+        position: relative;
+        z-index: -1;
+        opacity: 0.6;
+    }
+
+    h1 {
+        letter-spacing: 2px;
+        position: relative;
+        bottom: 245px;
+        left: 150px;
+        z-index: 1;
+        font-family: 'Archia';
+        font-size: 1.2rem;
+        color: white;
+    } */
+
+    .intro {
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 26px;
+        position: relative;
+        bottom: 3px;
+    }
+
+    .gallery-container-main img, .gallery-container img {
+       max-width: 100vw;
+    }
+
+    .gallery-container-main {
+        top: 0;
+    }
+
+    .gallery-container-3 {
+        margin-top: 0px;
+    }
+
+    footer {
+        height: 50vh;
+    }
+
+    .footer-items {
+        align-items: center;
+        padding-right: 20px;
+        margin-top: 80px;
+        
+    }
+
+    .footer-items a {
+        font-size: 25px;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .container-footer {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .mobile-no-display {
+        display: none;
+    }
+
+    .mobile-nav-border {
+        border-left: 2px solid white;
+        padding-left: 25px;
+        padding-bottom: 25px;
+        min-width: 130px;
+    }
+
+    .nav-items {
+        border: none
+    }
+
+    .on-page span {
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
