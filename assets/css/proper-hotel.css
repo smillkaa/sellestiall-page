@@ -1,17 +1,6 @@
 .on-page {
     min-width: max-content;
-}
-
-.on-page-2 {
-    position: relative;
-    z-index: 1;
-    top: 20px;
-    margin-right: 3px;
-    background-color: black;
-    padding-left: 30px;
-    padding-top: 25px;
-    font-family: 'D-DIN';
-    color: rgb(86, 0, 0);
+    margin-top: 40px;
 }
 
 .gallery-container-main {
@@ -19,6 +8,6 @@
     top: -400px;
 }
 
-.gallery-container {
-    margin-top: -200px;
+.on-page span .red-text {
+    background-color: rgba(0, 0, 0 , 0);
 }

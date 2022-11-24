@@ -121,6 +121,7 @@ a:hover {
     font-size: 16px;
     letter-spacing: 2px;
     color: rgb(123, 0, 0);
+    background-color: rgba(135, 53, 53, 0);
 }
 
 footer a {
