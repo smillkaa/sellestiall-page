@@ -227,12 +227,13 @@ footer p {
     }
 
     .footer-items a {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .copyright {
         text-align: center;
-        font-size: 15px;
+        font-size: 12px;
+        color: rgb(41, 41, 41);
     }
 
     .container-footer {
