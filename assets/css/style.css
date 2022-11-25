@@ -107,8 +107,7 @@ a:hover {
 
 
 .gallery-container-main {
-    position: relative;
-    top: -300px;
+    margin-top: -300px;
 }
 
 .gallery-container-main img {
@@ -116,17 +115,13 @@ a:hover {
     height: auto;
 }
 
-.gallery-container {
-    margin-top: 10px;
-}
-
 .gallery-container img {
     max-width: 350px;
     height: auto;
 }
 
-.gallery-container-3 {
-    margin-top: 300px;
+.gallery-container-2 {
+   margin-top: 100px;
 }
 
 .red-text {
@@ -209,12 +204,17 @@ footer p {
     }
 
     .gallery-container-main {
-        top: 0;
+         margin-top: 0px;
     }
+    
 
     .gallery-container-3 {
         margin-top: 0px;
     }
+
+    .gallery-container-2 {
+        margin-top: 0px;
+     }
 
     footer {
         height: 50vh;
