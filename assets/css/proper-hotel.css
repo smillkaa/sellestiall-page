@@ -3,11 +3,16 @@
     margin-top: 40px;
 }
 
-.gallery-container-main {
-    position: relative;
-    top: -400px;
-}
-
 .on-page span .red-text {
     background-color: rgba(0, 0, 0 , 0);
+}
+
+.mobile-front-pic {
+    margin-top: -450px;
+}
+
+@media screen and (max-width:768px) {
+    .gallery-container-main {
+        margin-top: 0px;
+    }
 }
