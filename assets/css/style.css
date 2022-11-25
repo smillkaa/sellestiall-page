@@ -181,7 +181,7 @@ footer p {
     header {
         position: relative;
         z-index: 1;
-        padding: 70px 20px 0 0;
+        padding: 30px 20px 0 0;
         font-size:15px;
     }
 
@@ -193,24 +193,6 @@ footer p {
         min-height: 100%;
         width: auto;
     }
-    /* .logo {
-        max-width: 250px;
-        max-height: auto;
-        position: relative;
-        z-index: -1;
-        opacity: 0.6;
-    }
-
-    h1 {
-        letter-spacing: 2px;
-        position: relative;
-        bottom: 245px;
-        left: 150px;
-        z-index: 1;
-        font-family: 'Archia';
-        font-size: 1.2rem;
-        color: white;
-    } */
 
     .intro {
         margin-left: 0;
@@ -240,7 +222,6 @@ footer p {
 
     .footer-items {
         align-items: center;
-        padding-right: 20px;
         margin-top: 80px;
         
     }
