@@ -6,3 +6,4 @@ function writeCopyright() {
 }
 
 writeCopyright()
+
