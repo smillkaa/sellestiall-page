@@ -9,7 +9,9 @@
     font-family: 'Monogram';
     src: url('../fonts/Monogram\ Framer\ Demo.ttf') format('opentype');
 }
-
+* {
+    transition: 0.5s;
+}
 h1 {
     letter-spacing: 6px;
     font-family: "ivymode", sans-serif;
@@ -22,7 +24,7 @@ h1 {
 /* Poem */
 .monogram {
     font-family: 'Monogram';
-    color: rgb(210, 210, 210);
+    color: rgb(117, 117, 117);
     font-size: 0.8rem;
     white-space: nowrap;
     overflow: hidden;
@@ -41,6 +43,10 @@ h1 {
     right: 120px;
 }
 
+.titles {
+    opacity: 1;
+}
+
 .gallery-text {
     font-family: 'D-DIN', sans-serif;
     font-weight: 200;
@@ -48,14 +54,20 @@ h1 {
     font-size: 0.8rem;
     letter-spacing: 1px;
     color: rgb(201, 201, 201);
-    transition: 0.2s;
+    
 }
 
 .gallery-text:hover {
     color: white;
     cursor: pointer;
+    transform: scale(1.05);
+
 }
-  
-.white-border {
-    border: 1px solid rgb(99, 99, 99);
+
+.painting1:hover {
+    transform: scale(1.05);
+}
+
+.animation {
+    cursor: pointer;
 }
