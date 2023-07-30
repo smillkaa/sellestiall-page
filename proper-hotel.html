@@ -2,65 +2,247 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sellestiall | The Proper Hotel</title>
-    <link rel="icon" sizes="16x16 32x32" type="image/png" href="assets/images/favicon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/proper-hotel.css">
+    <title>Document</title>
 </head>
-<body> 
-    <header class="sticky-top">
-        <div class="container d-flex flex-column text-cta subscribe-cta">
-            <div class="nav-items p-3 ps-0 d-flex flex-column ms-auto align-items-end">
-                <div class="mobile-nav-border d-flex flex-column ms-auto align-items-end">
-                    <a class="grey-text" href="home.html">HOME</a>
-                    <a class="mt-2 on-page-2">HOTELS</a>
-                </div>
-                
-                <a class="mt-2 on-page text-end">PROPER <span class="pb-4 pt-4">HO</span>TEL<br><span class="red-text pb-4">SANTA MONICA</span></a>
-
-                <div class="mobile-nav-border d-flex flex-column ms-auto align-items-end">
-                    <a class="mt-2 grey-text" href="astri.html">BRANDS</a>
-                    <a class="mt-2 grey-text" href="jessica.html">JESSICA</a>
-                    <a class="mt-2 grey-text" href="michael.html">MICHAEL</a>
-                    <a class="mt-2 grey-text" href="adama.html">ADAMA</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="d-block d-md-none d-lg-none d-xl-none mobile-front-pic">
-        <img src="assets/images/LARISSA-1-M.png" />
-    </div>
-
-    <!-- first set of pictures -->
-    <div class="gallery-container-main d-flex ms-0 ms-md-5">
-        <div class="ps-4 pe-4 ps-md-0 pe-md-0">
-            <img class="col-12 col-md-6 col-lg-6" src="assets/images/ASTRI-1.jpg" />
-            <img class="mobile-no-display col-12 col-md-6 col-lg-6" src="assets/images/LARISSA-1.jpg" />
-        </div>
-    </div>
-
-    <!-- second set of pictures -->
-    <div class="gallery-container gallery-container-2 d-flex justify-content-center">
-        <div class="ps-4 pe-4 pt-5 ps-md-0 pe-md-0">
-            <img class="col-12 col-md-6 col-lg-6" src="assets/images/PROPER.jpg" />
-            <img class="mobile-no-display col-12 col-md-6 col-lg-6" src="assets/images/ASTRI-2.jpg" />
-        </div>
-    </div>
-
-    <footer>
-        <div class="container container-footer ps-0  pe-0 pb-3 pb-md-0 pe-md-4">
-            <div class="footer-items mb-3">
-                <a class="" href="https://www.instagram.com/sellestiall" target="_blank">INSTAGRAM</a>
-                <a class="" href="https://open.spotify.com/playlist/0NDsPtAM6clWUWJjpLiEUW?si=1e83ffb33d664606" target="_blank">SPOTIFY</a>
-                <a class="" href="mailto:sellestiall@gmail.com" target="_blank">CONTACT</a>
-            </div>
-            <p class="copyright"></p>
-        </div>
-    </footer>
-    <script src="assets/js/script.js"></script>
+<style>
+    .section-2 .reveal-demo {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 4em;
+}
+     
+</style>
+<body>
+    <section class="section section-2">
+        <h3 class="reveal-demo">Reveal From Bottom</h3>
+    </section>
 </body>
+<script>
+    (function($) {
+  // Array of scrollable elements
+  var elements = [];
+  // Hash of triggered elements
+  var triggered = {};
+  // Incremental id
+  var jScrollIDCounter = 0;
+  // jQuery function so you can add single behaviors
+  $.fn.jScrollability = function(start,end,fn) {
+    this.each(function() {
+      elements.push({
+        'start': start,
+        'end': end,
+        'fn': fn,
+        'el': $(this),
+        'trigger': false,
+        'duration': false
+      });
+    });
+  }
+  // jQuery function so you can add single triggered behaviors
+  $.fn.jScrollabilityTrigger = function(start,duration,fn) {
+    this.each(function() {
+      elements.push({
+        'start': start,
+        'end': false,
+        'fn': fn,
+        'el': $(this),
+        'trigger': true,
+        'duration': duration
+      });
+    });
+  }
+  // Base funtion so you can add multiple behaviors at once
+  $.jScrollability = function(config) {
+    // Add to the elements array
+    $.each(config,function(i,item) {
+      var element = $(item.selector);
+      // Only add this item to the array if the selector is valid
+      if (element.length > 0) {
+        element.each(function() {
+          elements.push({
+            'start': item.start,
+            'end': item.trigger === true ? false : item.end,
+            'trigger': item.trigger === true,
+            'duration': item.trigger === true ? item.duration : false,
+            'fn': item.fn,
+            'el': $(this)
+          });
+        });
+      }
+    });
+  }
+  var computeBoundary = function(b,$el,bType) {
+    // Perform differently based on type
+    switch(typeof b) {
+      // If it's a function, just call it
+      case 'function':
+        return b($el);
+      // If it's a string, it's a pre-loaded functor
+      case 'string':
+        // Get the boundaries of the parent element in the DOM
+        if (b == 'parent') {
+          // Different values for start and end
+          if (bType == 'start') {
+            return $el.parent().offset().top;
+          } else if (bType == 'end') {
+            return $el.parent().offset().top + $el.parent().outerHeight();
+          }
+        // Get the boundaries of the el
+        } else if (b == 'self') {
+          // Different values for start and end
+          if (bType == 'start') {
+            return $el.offset().top;
+          } else if (bType == 'end') {
+            return $el.offset().top + $el.outerHeight();
+          }
+        } else if (b == 'window') {
+          // Different values for start and end
+          if (bType == 'start') {
+            return $el.offset().top;
+          } else if (bType == 'end') {
+            return $el.offset().top + $(window).height();
+          }
+        } else {
+          return 0;
+        }
+      // It might also be a hard-coded value
+      default:
+        return b;
+    }
+  }
+  var computeAnimation = function($el,pcnt,fn) {
+    // Perform differently based on type
+    switch(typeof fn) {
+      // If it's a function, just call it
+      case 'function':
+        fn($el,pcnt);
+        break;
+      // If it's an object, it's a set of CSS transformations
+      case 'object':
+        if (fn.class) {
+          if (pcnt > 0) {
+            if (fn.add) {
+              fn.add.forEach(function(klasss) {
+                $el.addClass(klass);
+              });
+            }
+            if (fn.remove) {
+              fn.remove.forEach(function(klasss) {
+                $el.removeClass(klass);
+              });
+            }
+          } else {
+            if (fn.add) {
+              fn.add.forEach(function(klasss) {
+                $el.removeClass(klass);
+              });
+            }
+            if (fn.remove) {
+              fn.remove.forEach(function(klasss) {
+                $el.addClass(klass);
+              });
+            }
+          }
+        }
+        if (fn.styles || (!fn.styles && !fn.class)) {
+          var styleObject = fn.styles || fn;
+          var css = {};
+          for(cssprop in styleObject) {
+            var config = styleObject[cssprop];
+            var dist = config.end - config.start;
+            var val = config.start + (pcnt * dist);
+            css[cssprop] = val + config.unit;
+          }
+          $el.css(css);
+        }
+        break;
+    }
+  }
+  var generateUniqueId = function() {
+    // Just return an incremented number
+    return (jScrollIDCounter++) + '';
+  }
+  // Start animating once the page is ready
+  $(document).ready(function() {
+    // Setup jQuery objects for later
+    var $window = $(window), $document = $(document);
+    // Shim for requestAnimationFrame
+    var _requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function(c) { setTimeout(c,10); };
+    // Start animating
+    var animate = function() {
+      // Use the end of the browser window as the frame
+      var edge = $document.scrollTop() + $window.height();
+      // Get the current time for triggered animations
+      var now = Date.now();
+      $.each(elements,function(i,item) {
+        // Compute the start point
+        var start = computeBoundary(item.start,item.el,'start');
+        if (item.trigger === true) {
+          // Get the element's unique id for tracking
+          var uniqueId = item.el.attr('data-jscrollability-id');
+          // If there's no id, make one
+          if (!uniqueId) {
+            uniqueId = generateUniqueId();
+            item.el.attr('data-jscrollability-id',uniqueId);
+          }
+          // If the id isn't in the triggered hash and it's past its window, then let's get it started
+          if (edge >= start && !triggered[uniqueId]) {
+            triggered[uniqueId] = now;
+          // Otherwise check if its already been started; a true mean's its done
+          } else if (triggered[uniqueId] && triggered[uniqueId] !== true) {
+            // Get the time elapsed since the start
+            var delta = now - triggered[uniqueId];
+            // Find the percent complete by dividing that delta by the duration
+            var pcnt = delta / item.duration;
+            // If the percent is less than one, render the animation
+            if (pcnt < 1) {
+              computeAnimation(item.el,pcnt,item.fn);
+            // If the percent is greater than or equal to one, then mark the animation as done and render it finally
+            } else {
+              computeAnimation(item.el,1,item.fn);
+              triggered[uniqueId] = true;
+            }
+          }
+        } else {
+          // Compute the end point
+          var end = computeBoundary(item.end,item.el,'end');
+          // Compute the position
+          var max = end - start;
+          var progressOffset = Math.min(max,Math.max(0,edge - start));
+          // Make it a percent
+          var pcnt = progressOffset / max;
+          // Call the functor
+          computeAnimation(item.el,pcnt,item.fn);
+        }
+      });
+      _requestAnimationFrame(animate);
+    }
+    _requestAnimationFrame(animate);
+  });
+})(jQuery);
+    (function($) {
+    $(document).ready(function() {
+        $.jScrollability([
+            {
+                'selector': '.reveal-demo',
+                'start': 'parent',
+                'end': 'parent',
+                'fn': {
+                    'top': {
+                        'start': 100,
+                        'end': 15,
+                        'unit': '%'
+                    }
+                }
+            }
+        ]);
+    });
+})(jQuery);
+              
+</script>
 </html>
