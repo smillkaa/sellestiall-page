@@ -21,6 +21,12 @@ h1 {
     font-weight: 400;
 }
 
+h2 {
+    font-family: "ivymode", sans-serif;
+    font-size: 1rem;
+    color: rgb(185, 185, 185);
+}
+
 /* Poem */
 .monogram {
     font-family: 'Monogram';
@@ -70,4 +76,15 @@ h1 {
 
 .animation {
     cursor: pointer;
+}
+
+.titles {
+    position: absolute;   /* Positions the element at a specified position relative to its nearest positioned ancestor */
+    top: 50%;             /* Move the top edge to the vertical middle of the parent */
+    left: 50%;            /* Move the left edge to the horizontal middle of the parent */
+    transform: translate(-50%, -50%);
+}
+
+.description {
+    position: relative;
 }

@@ -21,31 +21,27 @@
                     <img class="w-75 painting1" src="https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736386/painting1-progressive_rlpti3.jpg" alt="">
                 </div>
 
-                <div class="section2 col-7 d-flex flex-column text-center align-items-center justify-content-center">
-                    <!-- <div class="art">
-                        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                            <path id="line" d="M10 100 L190 100" stroke="white" stroke-width="1" fill="none"/>
-                        </svg>
-                        <style>
-                            #line {
-                                stroke-dasharray: 180;
-                                stroke-dashoffset: 180;
-                                animation: draw 2s linear forwards;
-                            }
-
-                            @keyframes draw {
-                                to {
-                                    stroke-dashoffset: 0;
-                                }
-                            }
-                        </style>
-                    </div> -->
+                <div style="position: relative;height: 100vh;" class="section2 col-7 d-flex flex-column text-center align-items-center justify-content-center">
                     <div class="titles">
                         <h1 class="mb-4">SELLESTIALL</h1>
                         <p class="animation gallery-text">VIRTUAL GALLERY</p>
                         <div class="d-flex justify-content-center">
                             <a href="https://instagram.com/sellestiall/" target="_blank"><img class="me-2" style="width: 18px;" src="assets/images/instagram.png" alt="instagram"></a>
                             <a href="https://open.spotify.com/playlist/0NDsPtAM6clWUWJjpLiEUW?si=fa14ee12e143427f" target="_blank"><img style="width: 18px; height: 18px;margin-top:1px;" src="assets/images/spotify (1).png" alt="spotify"></a>
+                        </div>
+                    </div>
+                    <div class="description p-5" style="background-color: rgb(0, 0, 0);">
+                        <div>
+                            <h2 class="text-center me-0">"When You're Not Looking"</h1>
+                            <p class="text-uppercase" style="font-family: 'D-DIN', sans-serif;color:rgb(44, 44, 44);font-size: 0.8rem;">Private order | Sold</p>
+                        </div>
+                        <div>
+                            <p class="text-start gallery-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus non nisi porro delectus possimus iste exercitationem ipsam esse doloremque pariatur! Vel, natus. Quibusdam assumenda qui animi fugiat nobis dolores accusantium!</p>
+                            <p class="text-start gallery-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus totam laboriosam, ad officiis ab accusamus porro doloremque, exercitationem nemo suscipit sint esse. Provident quo nihil culpa voluptates dignissimos, exercitationem dolorum?</p>
+                        </div>
+                        <div>
+                            <a href="#" style="text-decoration:none;background-color: rgba(0, 0, 0, 0); border: none;" class="gallery-text">NEXT</a>
+                            <a href="#" style="text-decoration:none;background-color: rgba(0, 0, 0, 0); border: none;" class="gallery-text">EXIT</a>
                         </div>
                     </div>
                 </div>
@@ -60,12 +56,76 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+    var clicked = false;
+
+    // Set the initial opacity for .description
+    $('.description').css({opacity: 0, display: 'none'});
+
+    // When the element with class painting1 is hovered
+    $('.painting1').hover(function(){
+        if(!clicked) {
+            // Fade out and slide up the poem and titles div over 1000ms using .animate()
+            $('.poem').children('.monogram').each(function(i) {
+                $(this).stop().delay(100 * i).animate({opacity: 0, bottom: '100vh'}, 1000);  // Change bottom value to '100vh'
+            });
+            $('.titles').stop().animate({opacity: 0}, 1000);
+
+            // Fade in the description div over 2000ms using .animate()
+            $('.description').css('display', 'block');
+            $('.description').stop().animate({opacity: 1}, 2000);
+        }
+    }, function(){
+        if(!clicked) {
+            // When the mouse leaves, fade out the description div over 2000ms using .animate()
+            $('.description').stop().animate({opacity: 0}, 2000, function() {
+                $(this).css('display', 'none');
+            });
+
+            // Fade in and slide down the poem and titles div over 1000ms using .animate()
+            $('.poem').children('.monogram').each(function(i) {
+                $(this).stop().delay(100 * i).animate({opacity: 1, bottom: '0px'}, 1000);
+            });
+            $('.titles').stop().animate({opacity: 1}, 300);
+        }
+    });
+
+    // When the element with class painting1 is clicked
+    $('.painting1').click(function(){
+        clicked = !clicked;
+        if(clicked) {
+            // Fade in the description div over 2000ms using .animate()
+            $('.description').css('display', 'block');
+            $('.description').stop().animate({opacity: 1}, 2000);
+
+            // Fade out and slide up the poem and titles div over 1000ms using .animate()
+            $('.poem').children('.monogram').each(function(i) {
+                $(this).stop().delay(100 * i).animate({opacity: 0, bottom: '100vh'}, 1000);  // Change bottom value to '100vh'
+            });
+            $('.titles').stop().animate({opacity: 0}, 1000);
+        } else {
+            // When clicked again, fade out the description div over 2000ms using .animate()
+            $('.description').stop().animate({opacity: 0}, 2000, function() {
+                $(this).css('display', 'none');
+            });
+
+            // Fade in and slide down the poem and titles div over 1000ms using .animate()
+            $('.poem').children('.monogram').each(function(i) {
+                $(this).stop().delay(100 * i).animate({opacity: 1, bottom: '0px'}, 1000);
+            });
+            $('.titles').stop().animate({opacity: 1}, 300);
+        }
+    });
+});
+
+    </script>
 </body>
 </html>
 
