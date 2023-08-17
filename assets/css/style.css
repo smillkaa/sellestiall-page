@@ -12,6 +12,7 @@
 * {
     transition: 0.5s;
 }
+
 h1 {
     letter-spacing: 6px;
     font-family: "ivymode", sans-serif;
@@ -67,7 +68,7 @@ h2 {
     transform: scale(1.05);
 }
 
-.painting1:hover {
+.painting:hover {
     transform: scale(1.05);
 }
 

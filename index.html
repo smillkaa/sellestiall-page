@@ -15,37 +15,45 @@
 <body class="bg-black">
     <div class="screen">
         <div class="container" style="height:100vh;">
-            <div class="row in-center text-white" style="height:100vh;">
-
-                <div class="animation col-5 me-auto d-flex align-items-center justify-content-center">
-                    <img class="w-75 painting1 showdisplay" src="assets/images/apohl.JPG" alt="">
+            <div class="row h-100">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="row text-white w-100">
+                        <!-- Painting img -->
+                        <div class="p-0 m-0 animation col-5 me-auto d-flex align-items-center justify-content-center">
+                            <img class="w-75 painting showdisplay">
+                        </div>
+                        <!-- Intro/description -->
+                        <div style="position: relative;" class="section2 col-7 d-flex flex-column text-center align-items-center justify-content-center">
+                            <!-- Intro -->
+                            <div class="titles">
+                                <h1 class="mb-4">A Z U</h1>
+            
+                                <p class="animation gallery-text showdisplay">VIRTUAL GALLERY</p>
+                                <div class="d-flex justify-content-center">
+                                    <a href="https://instagram.com/sellestiall/" target="_blank"><img class="me-2" style="width: 18px;" src="assets/images/instagram.png" alt="instagram"></a>
+                                    <a href="https://open.spotify.com/playlist/0NDsPtAM6clWUWJjpLiEUW?si=fa14ee12e143427f" target="_blank"><img style="width: 18px; height: 18px;margin-top:1px;" src="assets/images/spotify (1).png" alt="spotify"></a>
+                                </div>
+                            </div>
+                            <!-- Description  -->
+                            <div class="description p-5" style="background-color: rgb(0, 0, 0);">
+                                <div>
+                                    <h2 class="title text-center me-0"></h2>
+                                    <p class="subtitle text-uppercase" style="font-family: 'D-DIN', sans-serif;color:rgb(44, 44, 44);font-size: 0.8rem;"></p>
+                                </div>
+                                <div>
+                                    <p class="text-start gallery-text"></p>
+                                    <p class="text-start gallery-text"></p>
+                                </div>
+                                <div class="navigation mt-5 d-flex justify-content-center align-items-center">
+                                    <a cl href="#" style="text-decoration:none;" class="next">NEXT</a>
+                                    <p class="mx-3 mb-0 next">|</p>
+                                    <a href="#" style="text-decoration:none;" class="exit">EXIT</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div style="position: relative;height: 100vh;" class="section2 col-7 d-flex flex-column text-center align-items-center justify-content-center">
-                    <div class="titles">
-                        <h1 class="mb-4">A Z U</h1>
-      
-                        <p class="animation gallery-text showdisplay">VIRTUAL GALLERY</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="https://instagram.com/sellestiall/" target="_blank"><img class="me-2" style="width: 18px;" src="assets/images/instagram.png" alt="instagram"></a>
-                            <a href="https://open.spotify.com/playlist/0NDsPtAM6clWUWJjpLiEUW?si=fa14ee12e143427f" target="_blank"><img style="width: 18px; height: 18px;margin-top:1px;" src="assets/images/spotify (1).png" alt="spotify"></a>
-                        </div>
-                    </div>
-                    <div class="description p-5" style="background-color: rgb(0, 0, 0);">
-                        <div>
-                            <h2 class="text-center me-0">"A Piece of Her Love Story"</h1>
-                            <p class="text-uppercase" style="font-family: 'D-DIN', sans-serif;color:rgb(44, 44, 44);font-size: 0.8rem;">Acrylic Painting | Sold</p>
-                        </div>
-                        <div>
-                            <p class="text-start gallery-text">To make love. That is why we are here. To melt in his arms, to drown in his gaze, to stand naked in front of him and feel that this is where you belong. She is vulnerable and fragile in his presence. She stands naked in front of him and drops her armor to the ground.</p>
-                            <p class="text-start gallery-text">The next morning, she will wake up feeling something light is growing inside of her. And this will give her just enough fire to survive the day. Until she falls back to his arms again.</p>
-                        </div>
-                        <div class="mt-5 d-flex justify-content-center align-items-center">
-                            <a cl href="#" style="text-decoration:none;" class="next">NEXT</a>
-                            <p class="mx-3 mb-0 next">|</p>
-                            <a href="#" style="text-decoration:none;" class="exit">EXIT</a>
-                        </div>
-                    </div>
+            </div>
                 </div>
             </div>
         </div>
@@ -64,42 +72,6 @@
         AOS.init();
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            // Set the initial opacity for .description
-            $('.description').css({opacity: 0, display: 'none'});
-
-            function showDescription() {
-                // Fade in the description div
-                $('.description').css('display', 'block').stop().animate({ opacity: 1 }, 2000);
-
-                // Fade out and slide up the poem and titles div
-                $('.poem').children('.monogram').each(function(i) {
-                    $(this).stop().delay(100 * i).animate({ opacity: 0, bottom: '100vh' }, 1000);
-                });
-                $('.titles').stop().animate({ opacity: 0 }, 1000);
-            }
-
-            // When the element with class showdisplay is clicked
-            $('.showdisplay').click(showDescription);
-
-            // When hovering on the painting, description appears
-            $('.painting1').hover(showDescription);
-            
-            $('.exit').click(function() {
-                $('.description').stop().animate({opacity: 0}, 2000, function() {
-                    $(this).css('display', 'none');
-                });
-
-                // Fade in and slide down the poem and titles div over 1000ms using .animate()
-                $('.poem').children('.monogram').each(function(i) {
-                    $(this).stop().delay(100 * i).animate({opacity: 1, bottom: '0px'}, 1000);
-                });
-                $('.titles').stop().animate({opacity: 1}, 300);
-                
-            });
-        });
-    </script>
 </body>
 </html>
 
