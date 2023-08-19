@@ -7,7 +7,15 @@ $(document).ready(function(){
             img: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736386/painting1-progressive_rlpti3.jpg",
             title: "When You're Not Looking",
             subtitle: "Acrylic Painting | Sold",
-            description: ["Description for the second painting"]
+            description: [
+                "Ancient statue. No face, no hands, existing naked. I am carried away, bewitched, bewildered in those spaces of absence. The mind is fleshing out the details, private fantasies, perversions glossed in. ",
+                "A distant beauty. I am not part of the story, still, I will take her body.",
+                "Revealed, untouchable. Unreserved, untouchable. Unreserved, accidental.",
+                "Naked, devoid of romance.",
+                "Of course, I desire to touch her. She lives in painting – a reality separate from mine. As I gaze, as I dwell, compelled, I think, I’d like to melt into hers.",
+                "Woman, so distant. Obsessed with question, I confront our connection; unsure if she leads a life of her own, or rather solely exists for the frame, no mind, no heart of her own, she is merely a silhouette made from white paint."
+
+            ]
         },
         {
             img: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736387/painting2-progressive_mduenl.jpg",
@@ -19,37 +27,35 @@ $(document).ready(function(){
             ]
         },
         {
-            img: "",
-            title: "Explore More",
-            subtitle: "",
-            description: [""]
-        },
-        {
-            img: "",
-            title: "Explore More",
-            subtitle: "",
-            description: [""]
+            img: "IMG_4213-2.png",
+            title: "Follow Azu on Instagram and be the first to know",
+            subtitle: "@azutika",
+            description: [
+                "Join our community by subscribing, and be among the first to witness the unveiling of our new collection. Each piece we offer is steeped in originality, with no reproductions available for purchase.",
+                "For those seeking a personal touch, custom orders are welcome—whether to be showcased in a future collection or cherished in private. Await with us: a new era of artistry is on the horizon.",
+                "Yours truly, Azu"
+            ]
         }
     ];
 
     let currentIndex = 0;
     $('.painting').attr('src', paintings[0].img);
     updatePainting();  // <-- Call the updatePainting function here
-
+    
     // Function to update painting img and description when clicked next
     function updatePainting() {
         $('.painting').attr('src', paintings[currentIndex].img);
         $('.description .title').text(paintings[currentIndex].title);
         $('.description .subtitle').text(paintings[currentIndex].subtitle);
-    
+        
         var descriptionHtml = "";
         paintings[currentIndex].description.forEach(paragraph => {
-            descriptionHtml += `<p class="text-start gallery-text">${paragraph}</p>`;
+            descriptionHtml += `<p class="text-start description-text-paragraph">${paragraph}</p>`;
         });
-    
-        $('.description').find(".gallery-text").remove();  // Remove previous description paragraphs
-        $('.description > div:first-child').after(descriptionHtml);  // Add the new paragraphs
+        
+        $('.description .description-text').html(descriptionHtml);  // Replace content of gallery-text div with new paragraphs
     }
+    
     
 
     // Event listener when clicked next
@@ -60,12 +66,12 @@ $(document).ready(function(){
     
     // Animations
     
-    // Set the initial opacity for .description
-    $('.description').css({opacity: 0, display: 'none'});
+    // Set the initial opacity and pointer-events for .description
+    $('.description').css({opacity: 0, display: 'none'}).addClass('not-active');
 
     function showDescription() {
         // Fade in the description div
-        $('.description').css('display', 'block').stop().animate({ opacity: 1 }, 2000);
+        $('.description').removeClass('not-active').css('display', 'block').stop().animate({ opacity: 1 }, 2000);
 
         // Fade out and slide up the poem and titles div
         $('.poem').children('.monogram').each(function(i) {
@@ -78,11 +84,11 @@ $(document).ready(function(){
     $('.showdisplay').click(showDescription);
 
     // When hovering on the painting, description appears
-    $('.painting').hover(showDescription);
+    $('.painting, .gallery-text').hover(showDescription);
     
     $('.exit').click(function() {
         $('.description').stop().animate({opacity: 0}, 2000, function() {
-            $(this).css('display', 'none');
+            $(this).css('display', 'none').addClass('not-active');
         });
 
         // Fade in and slide down the poem and titles div over 1000ms using .animate()

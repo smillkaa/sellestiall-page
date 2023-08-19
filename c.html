@@ -1,0 +1,23 @@
+
+https://api.instagram.com/oauth/authorize
+  ?client_id=1042381180092078
+  &redirect_uri=https://azutika.com/
+  &scope=user_profile,user_media
+  &response_type=code
+
+  ?code=AQCTUFVY_37Ier_7FZYCQhZyFw9Pvhl_04xMiFW7Hp0xJOQDJ4Cz9u2TjENXRuhfkXWAS42Awt9smOkFuxw4JlOXgjuL-J0gkfE4O_ph1Djd4XkvR27-KGs64YI0N-PIHQ9Yw9plpxANdSrmD6Y5EefvohW05c1H_n-U4wadsUJiloKs5T2hRQoIjMDqTcy8T9P9FDpfARMo18AwjRAdYCQ9Pa6w3kv3r6VV_1kUxXRS7A
+
+  curl -X POST \
+  https://api.instagram.com/oauth/access_token \
+  -F client_id=1042381180092078 \
+  -F client_secret=336374e4dd7c27df3e2231c8f68758a1 \
+  -F grant_type=authorization_code \
+  -F redirect_uri=https://azutika.com/ \
+  -F code=AQCTUFVY_37Ier_7FZYCQhZyFw9Pvhl_04xMiFW7Hp0xJOQDJ4Cz9u2TjENXRuhfkXWAS42Awt9smOkFuxw4JlOXgjuL-J0gkfE4O_ph1Djd4XkvR27-KGs64YI0N-PIHQ9Yw9plpxANdSrmD6Y5EefvohW05c1H_n-U4wadsUJiloKs5T2hRQoIjMDqTcy8T9P9FDpfARMo18AwjRAdYCQ9Pa6w3kv3r6VV_1kUxXRS7A
+
+  {"access_token": "IGQWRPUGUzbXliemFEdHN3Q0pZAcEExX3g4c2J6Sk14bEVnR3h5V0ZAqVFQxLWxHUW9WWVFfWDYyZAFhvWHZAiYXdsSzBWX1ZAKXzJpMURVVXE5Um44T2pTQWdfWWFGd3cxNVhhMmpsUFpVYUhPQy1oRThkLThzbEJmNlk1MVk4emZA3VER4aW8ZD", "user_id": 6693128420778066}
+
+  curl -X GET \
+  'https://graph.instagram.com/6693128420778066?fields=id,username&access_token=IGQWRPUGUzbXliemFEdHN3Q0pZAcEExX3g4c2J6Sk14bEVnR3h5V0ZAqVFQxLWxHUW9WWVFfWDYyZAFhvWHZAiYXdsSzBWX1ZAKXzJpMURVVXE5Um44T2pTQWdfWWFGd3cxNVhhMmpsUFpVYUhPQy1oRThkLThzbEJmNlk1MVk4emZA3VER4aW8ZD'
+
+  GET /me?fields=username,media&access_token=IGQWRPUGUzbXliemFEdHN3Q0pZAcEExX3g4c2J6Sk14bEVnR3h5V0ZAqVFQxLWxHUW9WWVFfWDYyZAFhvWHZAiYXdsSzBWX1ZAKXzJpMURVVXE5Um44T2pTQWdfWWFGd3cxNVhhMmpsUFpVYUhPQy1oRThkLThzbEJmNlk1MVk4emZA3VER4aW8ZD
