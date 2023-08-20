@@ -98,4 +98,110 @@ $(document).ready(function(){
         $('.titles').stop().animate({opacity: 1}, 300);
         
     });
+
+    // Function to show the dim overlay and centered poem
+    function showOverlayAndPoem() {
+        $('.dim-overlay').css({
+            'display': 'block',
+            'opacity': 0
+        }).stop(true, true).animate({opacity: 1}, 1000, function() {
+            $('.poem-centered').css({
+                'display': 'block',
+                'opacity': 0
+            }).stop(true, true).animate({opacity: 1}, 1000);
+        });
+    }
+
+    // Function to hide the dim overlay and centered poem
+    function hideOverlayAndPoem() {
+        $('.poem-centered').stop(true, true).animate({opacity: 0}, 1000, function() {
+            $(this).css('display', 'none');
+            $('.dim-overlay').stop(true, true).animate({opacity: 0}, 1000, function() {
+                $(this).css('display', 'none');
+            });
+        });
+    }
+
+    // Click event to show dim overlay and centered poem
+    $('.poem').click(function(event) {
+        event.stopPropagation();
+        showOverlayAndPoem();
+    });
+
+    // Click event on the dimmed overlay to hide them
+    $('.dim-overlay').click(function() {
+        hideOverlayAndPoem();
+    });
+
+    // Click event on the poem-centered to hide them
+    $('.poem-centered').click(function(event) {
+        event.stopPropagation();
+        hideOverlayAndPoem();
+    });
+
+
+    // View note animation
+
+    var closeButtonHTML = `
+        <div class="mx-auto mt-5">
+            <p class="text-center close-note">Close</p>
+        </div>`;
+
+    var viewNoteButtonHTML = `
+        <div class="mx-auto mt-5">
+            <p class="text-center view-note">View Note</p>
+        </div>`;
+        
+    var mosquitoPoemContent = $('.mosquito-poem').prop('outerHTML');
+
+ // Define the HTML content for the note
+var noteContent = `
+<div class="note-content mx-auto mt-5 pt-5">
+    <p>As I wrote this poem, I was amused when I read it - sounding so erotic, I thought that the reader must feel like they are being told about a sex scene happening right in its moment.</p>
+    <p>However, the reality of what is being described here is quite different, asexual.</p>
+    <p>As this poem is not quite what it seems, so are the paintings and their stories hanging alongside, purposely left vague, grammatically enigmatic - they are inviting to co-create an image and play with perception.</p>
+</div>
+`;
+
+var closeButtonHTML = `
+<div class="mx-auto mt-5">
+    <p class="text-center close-note">CLOSE</p>
+</div>
+`;
+
+
+$('.view-note').click(function(event) {
+    event.stopPropagation();
+    
+    // Fade out the entire .parent div
+    $('.parent').fadeOut(400, function() {
+        // This callback ensures actions are taken after the fade out completes
+
+        // Replace the content of the parent with the note and close button
+        $(this).empty().append(noteContent + closeButtonHTML);
+        
+        // Fade in the parent div with the new content
+        $(this).fadeIn(400);
+    });
 });
+
+// And when you close the note, revert back to the mosquito-poem
+
+$(document).on('click', '.close-note', function() {
+    // Fade out the parent div containing the note and close button
+    $('.parent').fadeOut(400, function() {
+        // Once faded out, revert back to the mosquito-poem
+        $(this).empty().append(mosquitoPoemContent + viewNoteButtonHTML);
+        
+        // Fade the parent div back in with the mosquito-poem
+        $(this).fadeIn(400);
+    });
+});
+
+
+    
+});
+
+
+
+

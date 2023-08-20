@@ -88,13 +88,18 @@ h2 {
     color: rgb(72, 72, 72); 
 }
 
+.view-note, .close-note {
+    color: rgb(72, 72, 72); 
+}
+
 .next {
     color: rgb(201, 201, 201); 
 }
 
-.next:hover, .exit:hover {
+.next:hover, .exit:hover, .view-note:hover, .close-note:hover {
     transform: scale(1.05);
     color: white;
+    cursor: pointer;
 }
 
 .animation {
@@ -114,4 +119,36 @@ h2 {
 
 .description.not-active {
     pointer-events: none;
+}
+
+
+/* Poem Animation */
+.dim-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1); /* This will ensure it's nearly black */
+    z-index: 1000; /* To ensure it appears above all other content */
+    display: none; /* Initially hidden */
+}
+
+.poem-centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* This will center the poem in the screen */
+    z-index: 1001; /* To ensure it appears above the overlay */
+    display: none; /* Initially hidden */
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'D-DIN';
+    font-weight: 200;
+
+}
+
+
+.poem:hover {
+    cursor: pointer;
 }
