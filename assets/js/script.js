@@ -143,7 +143,7 @@ $('.parent').on('click', '.view-note', function(event) {
                     <p>However, the reality of what is being described here is quite different, asexual.</p>
                     <p>As this poem is not quite what it seems, so are the paintings and their stories hanging alongside, purposely left vague, grammatically enigmatic - they are inviting to co-create an image and play with perception.</p>
                 </div>
-                <p class="close-btn text-center mx-auto mt-5">Close</p>
+                <p class="close-btn text-center mx-auto mt-5">CLOSE</p>
             `;
             $('.parent').append(noteContentHtml);
         }
