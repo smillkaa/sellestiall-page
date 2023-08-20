@@ -1,7 +1,8 @@
 $(document).ready(function() {
     const paintings = [
         {
-            img: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736386/painting1-progressive_rlpti3.jpg",
+            dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736386/painting1-progressive_rlpti3.jpg",
+            img: "placeholder.png",
             title: "When You're Not Looking",
             subtitle: "Acrylic Painting | Sold",
             description: [
@@ -15,7 +16,8 @@ $(document).ready(function() {
             ]
         },
         {
-            img: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736387/painting2-progressive_mduenl.jpg",
+            dataSrc:"https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736387/painting2-progressive_mduenl.jpg",
+            img: "placeholder.png",
             title: '"A Piece of Her Love Story"',
             subtitle: "Acrylic Painting | Sold",
             description: [
@@ -24,13 +26,32 @@ $(document).ready(function() {
             ]
         },
         {
-            img: "IMG_4213-2.png",
-            title: "Follow Azu on Instagram and be the first to know",
-            subtitle: "@azutika",
+            dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1692567463/hades_wqlp7l.jpg",
+            img: "placeholder.png",
+            title: "What’s Next",
+            subtitle: "UPCOMING PAINTING COLLECTION | A TASTE OF HADES",
             description: [
                 "Join our community by subscribing, and be among the first to witness the unveiling of our new collection. Each piece we offer is steeped in originality, with no reproductions available for purchase.",
-                "For those seeking a personal touch, custom orders are welcome—whether to be showcased in a future collection or cherished in private. Await with us: a new era of artistry is on the horizon.",
-                "Yours truly, Azu"
+                "“I feel like my body is tightened by ropes. Held by the grips of desire. Tightening me inwards. Tightening my organs to force out tears and a wail that I cannot shout out loud, it’s embarrassing. His presence in my mind is punishing my body, I carry him on me.”"
+            ]
+        },
+        {
+            dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736386/painting1-progressive_rlpti3.jpg",
+            img: "placeholder.png",
+            title: "Custom Orders",
+            subtitle: "Custom painting price ranges from 1000USD to 3000USD depending on size",
+            description: [
+                "For those who wish to see their own image on the black canvas, personal paintings can be ordered via email azutika.co@gmail.com ",
+                "Questions are welcome on Instagram DMs as well."
+            ]
+        },
+        {
+            dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1692567787/body_jpgur6.jpg",
+            img: "placeholder.png",
+            title: "More from Azu",
+            subtitle: "SPOTIFY",
+            description: [
+                "Listen to music curated by Azu on Spotify."
             ]
         }
     ];
@@ -42,15 +63,30 @@ $(document).ready(function() {
     const $parent = $('.parent');
     const $titles = $('.titles');
 
+    function loadImage($imageElement) {
+        const dataSrc = $imageElement.attr('data-src');
+        if (dataSrc) {
+            $imageElement.attr('src', dataSrc);
+        }
+    }
+    
+    
+    
     function updatePainting() {
         const currentPainting = paintings[currentIndex];
-        $painting.attr('src', currentPainting.img);
+        
+        // Set data-src for the current painting
+        $painting.attr('data-src', currentPainting.dataSrc);
+        // Load the image for the current painting
+        loadImage($painting);
+        
         $description.find('.title').text(currentPainting.title);
         $description.find('.subtitle').text(currentPainting.subtitle);
         
         const descriptionHtml = currentPainting.description.map(paragraph => `<p class="text-start description-text-paragraph">${paragraph}</p>`).join('');
         $description.find('.description-text').html(descriptionHtml);
     }
+    
 
     function showDescription() {
         $description.css('pointer-events', 'auto') // Enable pointer events when showing
