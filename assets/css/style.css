@@ -88,7 +88,7 @@ h2 {
     color: rgb(72, 72, 72); 
 }
 
-.view-note, .close-note {
+.view-note, .close-btn {
     color: rgb(72, 72, 72); 
 }
 
@@ -96,7 +96,7 @@ h2 {
     color: rgb(201, 201, 201); 
 }
 
-.next:hover, .exit:hover, .view-note:hover, .close-note:hover {
+.next:hover, .exit:hover, .view-note:hover, .close-btn:hover {
     transform: scale(1.05);
     color: white;
     cursor: pointer;

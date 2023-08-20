@@ -63,6 +63,7 @@ $(document).ready(function(){
         currentIndex = (currentIndex + 1) % paintings.length; // increment the index and wrap around if needed
         updatePainting();
     });
+
     
     // Animations
     
@@ -128,80 +129,49 @@ $(document).ready(function(){
         showOverlayAndPoem();
     });
 
-    // Click event on the dimmed overlay to hide them
-    $('.dim-overlay').click(function() {
-        hideOverlayAndPoem();
-    });
+        // View note animation
 
-    // Click event on the poem-centered to hide them
-    $('.poem-centered').click(function(event) {
-        event.stopPropagation();
-        hideOverlayAndPoem();
-    });
-
-
-    // View note animation
-
-    var closeButtonHTML = `
-        <div class="mx-auto mt-5">
-            <p class="text-center close-note">Close</p>
-        </div>`;
-
-    var viewNoteButtonHTML = `
-        <div class="mx-auto mt-5">
-            <p class="text-center view-note">View Note</p>
-        </div>`;
-        
-    var mosquitoPoemContent = $('.mosquito-poem').prop('outerHTML');
-
- // Define the HTML content for the note
-var noteContent = `
-<div class="note-content mx-auto mt-5 pt-5">
-    <p>As I wrote this poem, I was amused when I read it - sounding so erotic, I thought that the reader must feel like they are being told about a sex scene happening right in its moment.</p>
-    <p>However, the reality of what is being described here is quite different, asexual.</p>
-    <p>As this poem is not quite what it seems, so are the paintings and their stories hanging alongside, purposely left vague, grammatically enigmatic - they are inviting to co-create an image and play with perception.</p>
-</div>
-`;
-
-var closeButtonHTML = `
-<div class="mx-auto mt-5">
-    <p class="text-center close-note">CLOSE</p>
-</div>
-`;
-
-
-$('.view-note').click(function(event) {
+   // Delegating the click event of .view-note from .parent
+$('.parent').on('click', '.view-note', function(event) {
     event.stopPropagation();
-    
-    // Fade out the entire .parent div
-    $('.parent').fadeOut(400, function() {
-        // This callback ensures actions are taken after the fade out completes
-
-        // Replace the content of the parent with the note and close button
-        $(this).empty().append(noteContent + closeButtonHTML);
-        
-        // Fade in the parent div with the new content
-        $(this).fadeIn(400);
+    var elementsToFade = $('.mosquito-poem, .view-note-div');
+    elementsToFade.fadeOut(function(){
+        if ($(this).is(elementsToFade.last())) {
+            const noteContentHtml = `
+                <div class="note-content mx-auto mt-5 pt-5">
+                    <p>As I wrote this poem, I was amused when I read it - sounding so erotic, I thought that the reader must feel like they are being told about a sex scene happening right in its moment.</p>
+                    <p>However, the reality of what is being described here is quite different, asexual.</p>
+                    <p>As this poem is not quite what it seems, so are the paintings and their stories hanging alongside, purposely left vague, grammatically enigmatic - they are inviting to co-create an image and play with perception.</p>
+                </div>
+                <p class="close-btn text-center mx-auto mt-5">Close</p>
+            `;
+            $('.parent').append(noteContentHtml);
+        }
     });
 });
 
-// And when you close the note, revert back to the mosquito-poem
-
-$(document).on('click', '.close-note', function() {
-    // Fade out the parent div containing the note and close button
-    $('.parent').fadeOut(400, function() {
-        // Once faded out, revert back to the mosquito-poem
-        $(this).empty().append(mosquitoPoemContent + viewNoteButtonHTML);
-        
-        // Fade the parent div back in with the mosquito-poem
-        $(this).fadeIn(400);
-    });
+// Delegating the click event of .close-btn from .parent
+$('.parent').on('click', '.close-btn', function(event) {
+    console.log('close');
+    event.stopPropagation();
+    hideOverlayAndPoem();
+    const mosquitoPoemHtml = `
+    <div class="mosquito-poem mx-auto col-12 col-md-6">
+    <p class="fst-italic">Mosquito</p>
+    <p class="mb-0">Love.</p>
+    <p class="mb-0">We love and have sex.</p>
+    <p class="mb-0">I was listening to love and sex on a beautiful melodic soundtrack, the conversation was hypnotic, again, as if I was playing a scene in a movie. </p>
+    <p class="mb-0">I spit out my water in my cup, and I said, I ate a mosquito.</p>
+    <p class="mb-0">He said, I looked beautiful spitting.</p>
+</div>
+<div class="view-note-div mx-auto mt-5">
+    <p class="text-center view-note">VIEW NOTE</p>
+</div>`;
+    setTimeout(function() {
+        $('.parent').empty().append(mosquitoPoemHtml);
+    }, 1000);
 });
 
 
-    
+            
 });
-
-
-
-
