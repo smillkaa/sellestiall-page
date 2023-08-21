@@ -62,21 +62,47 @@ h2 {
     color: rgb(201, 201, 201); 
 }
 
+.hades-poem {
+    font-family: 'Monogram';
+    font-weight:900;
+    font-style: normal;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: rgb(59 59 59);
+    text-align: justify;
+}
+
+.azu-ig {
+    text-decoration: none;
+    color: white;
+}
+
+.playlist {
+    color: #ffffff;
+    font-family: 'D-DIN', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
 .description-text-paragraph:hover{
     color: white;
-    transform: scale(1.05);
     cursor: default;         /* Use the default cursor */
     user-select: none; 
 }
 
-.gallery-text:hover {
+.gallery-text:hover, .azu-ig:hover {
     color: white;
     transform: scale(1.05);
     cursor: pointer;
 }
 
-.painting:hover {
+.painting:hover, .playlist:hover {
     transform: scale(1.05);
+}
+.playlist:hover {
+    color: white;
 }
 
 .next, .exit {

@@ -5,54 +5,59 @@ $(document).ready(function() {
             img: "placeholder.png",
             title: "When You're Not Looking",
             subtitle: "Acrylic Painting | Sold",
-            description: [
-                "Ancient statue. No face, no hands, existing naked. I am carried away, bewitched, bewildered in those spaces of absence. The mind is fleshing out the details, private fantasies, perversions glossed in. ",
-                "A distant beauty. I am not part of the story, still, I will take her body.",
-                "Revealed, untouchable. Unreserved, untouchable. Unreserved, accidental.",
-                "Naked, devoid of romance.",
-                "Of course, I desire to touch her. She lives in painting – a reality separate from mine. As I gaze, as I dwell, compelled, I think, I’d like to melt into hers.",
-                "Woman, so distant. Obsessed with question, I confront our connection; unsure if she leads a life of her own, or rather solely exists for the frame, no mind, no heart of her own, she is merely a silhouette made from white paint."
-
-            ]
+            description: `
+                <p class='text-start description-text-paragraph'>Ancient statue. No face, no hands, existing naked. I am carried away, bewitched, bewildered in those spaces of absence. The mind is fleshing out the details, private fantasies, perversions glossed in.</p>
+                <p class='text-start description-text-paragraph'>A distant beauty. I am not part of the story, still, I will take her body.</p>
+                <p class='text-start description-text-paragraph'>Revealed, untouchable. Unreserved, untouchable. Unreserved, accidental.</p>
+                <p class='text-start description-text-paragraph'>Naked, devoid of romance.</p>
+                <p class='text-start description-text-paragraph'>Of course, I desire to touch her. She lives in painting – a reality separate from mine. As I gaze, as I dwell, compelled, I think, I’d like to melt into hers.</p>
+                <p class='text-start description-text-paragraph'>Woman, so distant. Obsessed with question, I confront our connection; unsure if she leads a life of her own, or rather solely exists for the frame, no mind, no heart of her own, she is merely a silhouette made from white paint.</p>
+                `
         },
         {
             dataSrc:"https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736387/painting2-progressive_mduenl.jpg",
             img: "placeholder.png",
             title: '"A Piece of Her Love Story"',
             subtitle: "Acrylic Painting | Sold",
-            description: [
-                "To make love. That is why we are here. To melt in his arms, to drown in his gaze, to stand naked in front of him and feel that this is where you belong. She is vulnerable and fragile in his presence. She stands naked in front of him and drops her armor to the ground.",
-                "The next morning, she will wake up feeling something light is growing inside of her. And this will give her just enough fire to survive the day. Until she falls back to his arms again."
-            ]
+            description: `
+                <p class='text-start description-text-paragraph'>To make love. That is why we are here. To melt in his arms, to drown in his gaze, to stand naked in front of him and feel that this is where you belong. She is vulnerable and fragile in his presence. She stands naked in front of him and drops her armor to the ground.</p>
+                <p class='text-start description-text-paragraph'>The next morning, she will wake up feeling something light is growing inside of her. And this will give her just enough fire to survive the day. Until she falls back to his arms again.</p>
+            `
         },
         {
             dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1692567463/hades_wqlp7l.jpg",
             img: "placeholder.png",
-            title: "What’s Next",
-            subtitle: "UPCOMING PAINTING COLLECTION | A TASTE OF HADES",
-            description: [
-                "Join our community by subscribing, and be among the first to witness the unveiling of our new collection. Each piece we offer is steeped in originality, with no reproductions available for purchase.",
-                "“I feel like my body is tightened by ropes. Held by the grips of desire. Tightening me inwards. Tightening my organs to force out tears and a wail that I cannot shout out loud, it’s embarrassing. His presence in my mind is punishing my body, I carry him on me.”"
-            ]
+            title: "Thank you for visiting!",
+            subtitle: "UPCOMING | A TASTE OF HADES",
+            description: `
+                <p class='text-start description-text-paragraph'>Follow Azu and her journey on Instagram <a class="azu-ig" href="https://instagram.com/azutika/" target="_blank">(@azutika)</a>, and be among the first to see the creation and unveiling of a new collection of paintings - “A Taste of Hades”. Each original piece will be available for purchase. No reproductions will be made.</p>
+                <p class='mt-5 hades-poem'>I feel like my body is tightened by ropes. Held by the grips of desire. Tightening me inwards. Tightening my organs to force out tears and a wail that I cannot shout out loud, it’s embarrassing. His presence in my mind is punishing my body, I carry him on me.</p>
+                
+            `
         },
         {
             dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736386/painting1-progressive_rlpti3.jpg",
             img: "placeholder.png",
             title: "Custom Orders",
-            subtitle: "Custom painting price ranges from 1000USD to 3000USD depending on size",
-            description: [
-                "For those who wish to see their own image on the black canvas, personal paintings can be ordered via email azutika.co@gmail.com ",
-                "Questions are welcome on Instagram DMs as well."
-            ]
+            subtitle: "HOW TO ORDER",
+            description: `
+                <p class='text-center description-text-paragraph'>For those who wish to see their own image on the black canvas, personal paintings can be ordered via email azutika.co@gmail.com</p>
+                <p class='text-center description-text-paragraph'>Custom painting price ranges from 1000USD to 3000USD depending on size.</p>
+                <p class='text-center description-text-paragraph'>Questions are welcome via email and Instagram DMs <a class="azu-ig" href="https://instagram.com/azutika/" target="_blank">(@azutika)</a>.</p>
+            `
         },
         {
-            dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1692567787/body_jpgur6.jpg",
+            dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1692632902/t2_ilr5kr.jpg",
             img: "placeholder.png",
             title: "More from Azu",
-            subtitle: "SPOTIFY",
-            description: [
-                "Listen to music curated by Azu on Spotify."
-            ]
+            subtitle: "SPOTIFY PLAYLISTS",
+            description: `
+                <p class='mx-auto col-12 col-md-8 text-center description-text-paragraph'>Listen to music curated by Azu on Spotify.</p>
+                <div class="mx-auto text-center mt-4 d-flex flex-column">
+                    <a href="https://open.spotify.com/playlist/4mDQ5oG3UZ574FoliinCFq?si=11b3471d733b4750" class='playlist'>CLASSICAL</a>
+                    <a href="https://open.spotify.com/playlist/0NDsPtAM6clWUWJjpLiEUW?si=ebf9b175fe3e476e" class='playlist'>ELECTRONIC</a>
+                </div>
+            `
         }
     ];
 
@@ -70,8 +75,6 @@ $(document).ready(function() {
         }
     }
     
-    
-    
     function updatePainting() {
         const currentPainting = paintings[currentIndex];
         
@@ -83,10 +86,8 @@ $(document).ready(function() {
         $description.find('.title').text(currentPainting.title);
         $description.find('.subtitle').text(currentPainting.subtitle);
         
-        const descriptionHtml = currentPainting.description.map(paragraph => `<p class="text-start description-text-paragraph">${paragraph}</p>`).join('');
-        $description.find('.description-text').html(descriptionHtml);
+        $description.find('.description-text').html(currentPainting.description);
     }
-    
 
     function showDescription() {
         $description.css('pointer-events', 'auto') // Enable pointer events when showing
