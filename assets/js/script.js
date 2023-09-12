@@ -91,8 +91,6 @@ $(document).ready(function() {
     // Initial check
     adjustSection2Display();
 
-    // Adjust visibility on window resize
-    $(window).resize(adjustSection2Display);
 
 
     // When clicking next, painting updates with its description.
