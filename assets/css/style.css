@@ -202,9 +202,6 @@ h2 {
 }
 
 @media screen and (max-width:768px) {
-    body, .container {
-        height: 75vh;
-    }
 
     .titles {
         position: fixed;
@@ -216,7 +213,7 @@ h2 {
 
     .content-row {
         position: relative;
-        top: 30vh;
+        top: 250px;
     }
     .painting {
         width: 100%;
