@@ -98,9 +98,6 @@ h2 {
     cursor: pointer;
 }
 
-.painting:hover, .playlist:hover {
-    transform: scale(1.05);
-}
 .playlist:hover {
     color: white;
 }
@@ -199,6 +196,9 @@ h2 {
         width: 75%;
     }
    
+    .painting:hover, .playlist:hover {
+        transform: scale(1.05);
+    }
 }
 
 @media screen and (max-width:768px) {
