@@ -121,6 +121,7 @@ $(document).ready(function() {
             $(this).delay(100 * i).animate({ opacity: 0, bottom: '100vh' }, 1000);
         });
         $titles.animate({ opacity: 0 }, 1000);
+        $('.instructions').animate({ opacity: 0 }, 1000);
         $poem.css('display', 'none');
     }
     
@@ -155,7 +156,7 @@ $(document).ready(function() {
         updatePainting();
     });
 
-    $('.painting, .gallery-text').click(showDescription);
+    $('.painting, .gallery-text, .azu').click(showDescription);
 
 
     $('.exit').click(function() {
@@ -185,6 +186,7 @@ $(document).ready(function() {
                     <p>As I wrote this poem, sounding erotic, I thought that the reader must feel like they are being told about a sex scene.</p>
                     <p>But the reality of what is being described here is quite different, asexual.</p>
                     <p>As this poem is not quite what it seems, so are the paintings and their stories sitting alongside. Purposely left vague, grammatically enigmatic - they are inviting to co-create an image and play with perception.</p>
+                    <p class="mt-5">( To begin the tour: close this window, then click on the painting. )</p>
                 </div>
                 <p class="close-btn text-center mx-auto mt-5">CLOSE</p>
             `;
