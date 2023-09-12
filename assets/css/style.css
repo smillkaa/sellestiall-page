@@ -213,9 +213,12 @@ h2 {
 
     .content-row {
         position: relative;
-        padding-top: 50px;
+        padding-top: 30px;
     }
     .painting {
         width: 94%;
+    }
+    .section2 {
+        margin-top: 50px;
     }
 }
