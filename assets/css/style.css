@@ -264,4 +264,7 @@ h2 {
     .navigation {
         padding: 3rem 1rem;
     }
+    .monogram {
+        color: rgb(71, 71, 71);
+    }
 }
