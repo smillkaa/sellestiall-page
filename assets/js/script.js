@@ -99,6 +99,7 @@ $(document).ready(function() {
             $(this).delay(100 * i).animate({ opacity: 0, bottom: '100vh' }, 1000);
         });
         $titles.animate({ opacity: 0 }, 1000);
+        $poem.css('display', 'none');
     }
     
 
@@ -140,6 +141,7 @@ $(document).ready(function() {
                 .animate({opacity: 0}, 2000, function() {
                     $(this).css('display', 'none').addClass('not-active');
                 });
+        $poem.css('display', 'block');
         $poem.children('.monogram').each(function(i) {
             $(this).delay(100 * i).animate({opacity: 1, bottom: '0px'}, 1000);
         });
