@@ -160,6 +160,14 @@ h2 {
 
 .poem {
     position:fixed; bottom:0;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    white-space: nowrap; /* prevents the content from wrapping */
+    overflow: hidden;    /* hides the overflowing content */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .poem:hover {
@@ -275,6 +283,12 @@ h2 {
 
     .poem-centered {
         width: 80%;
+    }
+    .poem {
+        padding: 0 1.8rem;
+    }
+    .monogram {
+        padding-left: 0;
     }
     .col-12-5, .col-12-7, .col-12-6 {
         flex: 0 0 100%; /* equivalent to col-12 */
