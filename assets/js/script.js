@@ -31,7 +31,7 @@ $(document).ready(function() {
             title: "Thank you for visiting!",
             subtitle: "UPCOMING | A TASTE OF HADES",
             description: `
-                <p class='text-start description-text-paragraph'>Follow Azu and her journey on Instagram <a class="azu-ig" href="https://instagram.com/azutika/" target="_blank">(@azutika)</a>, and be among the first to see the creation and unveiling of a new collection of paintings - “A Taste of Hades”. Each original piece will be available for purchase. No reproductions will be made.</p>
+                <p class='text-start description-text-paragraph'>Follow Azutika on Instagram <a class="azu-ig" href="https://instagram.com/azutika/" target="_blank">(@azutika)</a>, and be among the first to see the creation of a new collection of paintings - “A Taste of Hades”. Each original piece will be available for purchase. No reproductions will be made.</p>
                 <p class='mt-5 hades-poem'>I feel like my body is tightened by ropes. Held by the grips of desire. Tightening me inwards. Tightening my organs to force out tears and a wail that I cannot shout out loud, it’s embarrassing. His presence in my mind is punishing my body, I carry him on me.</p>
                 
             `
@@ -42,18 +42,18 @@ $(document).ready(function() {
             title: "Custom Orders",
             subtitle: "HOW TO ORDER",
             description: `
-                <p class='text-center description-text-paragraph'>For those who wish to see their own image on the black canvas, personal paintings can be ordered via email azutika.co@gmail.com</p>
-                <p class='text-center description-text-paragraph'>Custom painting price ranges from 1000USD to 3000USD depending on size.</p>
-                <p class='text-center description-text-paragraph'>Questions are welcome via email and Instagram DMs <a class="azu-ig" href="https://instagram.com/azutika/" target="_blank">(@azutika)</a>.</p>
+                <p class='description-text-paragraph'>For those who wish to see their own image on the black canvas, personal paintings can be ordered via email azutika.co@gmail.com</p>
+                <p class='description-text-paragraph'>Custom painting price ranges from 3000USD to 5000USD depending on size.</p>
+                <p class='description-text-paragraph'>Questions are welcome via email and Instagram DMs <a class="azu-ig" href="https://instagram.com/azutika/" target="_blank">(@azutika)</a>.</p>
             `
         },
         {
-            dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1692632902/t2_ilr5kr.jpg",
+            dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1694557397/spotify_av9pur.jpg",
             img: "placeholder.png",
-            title: "More from Azu",
+            title: "More from Azutika",
             subtitle: "SPOTIFY PLAYLISTS",
             description: `
-                <p class='mx-auto col-12 col-md-8 text-center description-text-paragraph'>Listen to music curated by Azu on Spotify.</p>
+                <p class='mx-auto col-12 col-md-8 text-center description-text-paragraph'>Listen to music curated by Azutika on Spotify.</p>
                 <div class="mx-auto text-center mt-4 d-flex flex-column">
                     <a href="https://open.spotify.com/playlist/4mDQ5oG3UZ574FoliinCFq?si=11b3471d733b4750" class='playlist'>CLASSICAL</a>
                     <a href="https://open.spotify.com/playlist/0NDsPtAM6clWUWJjpLiEUW?si=ebf9b175fe3e476e" class='playlist'>ELECTRONIC</a>
@@ -90,7 +90,6 @@ $(document).ready(function() {
 
     // Initial check
     adjustSection2Display();
-
 
 
     // When clicking next, painting updates with its description.
@@ -183,9 +182,9 @@ $(document).ready(function() {
             if ($(this).is(elementsToFade.last())) {
                 const noteContentHtml = `
                 <div class="note-content mx-auto mt-5 pt-5">
-                    <p>As I wrote this poem, I was amused when I read it - sounding so erotic, I thought that the reader must feel like they are being told about a sex scene happening right in its moment.</p>
-                    <p>However, the reality of what is being described here is quite different, asexual.</p>
-                    <p>As this poem is not quite what it seems, so are the paintings and their stories hanging alongside, purposely left vague, grammatically enigmatic - they are inviting to co-create an image and play with perception.</p>
+                    <p>As I wrote this poem, sounding erotic, I thought that the reader must feel like they are being told about a sex scene.</p>
+                    <p>But the reality of what is being described here is quite different, asexual.</p>
+                    <p>As this poem is not quite what it seems, so are the paintings and their stories sitting alongside. Purposely left vague, grammatically enigmatic - they are inviting to co-create an image and play with perception.</p>
                 </div>
                 <p class="close-btn text-center mx-auto mt-5">CLOSE</p>
             `;
