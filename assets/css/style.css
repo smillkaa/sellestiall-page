@@ -200,20 +200,13 @@ h2 {
         position: relative;
     }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body, html {
-        height: 100%;
-        overflow: hidden; /* Prevent scrolling */
-    }
 }
 
 @media screen and (min-width:768px){
     h1 {
         letter-spacing: 6px;
+    }
+    .poem {
+        position:fixed; bottom:0;
     }
 }
