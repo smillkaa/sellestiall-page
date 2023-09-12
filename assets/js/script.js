@@ -81,7 +81,8 @@ $(document).ready(function() {
     // Function to check window size and adjust section2 display
      function adjustSection2Display() {
         if ($(window).width() <= 768) {
-            $('.section2').css('display', 'none'); // Assumes that section2 is an ID
+            $('.section2').css('display', 'none');
+            $('body').css('overflow', 'hidden');
         } else {
             $('.section2').css('display', 'flex'); // Resets the display property for non-mobile view
         }
@@ -114,6 +115,7 @@ $(document).ready(function() {
         // If mobile, section2 from d-none to d-flex
         if ($(window).width() <= 768) {
             $('.section2').css('display', 'flex');
+            $('body').css('overflow', 'auto');
         }
         $description.css('pointer-events', 'auto') // Enable pointer events when showing
                 .removeClass('not-active')
