@@ -69,6 +69,7 @@ $(document).ready(function() {
     const $parent = $('.parent');
     const $titles = $('.titles');
 
+    // Not sure
     function loadImage($imageElement) {
         const dataSrc = $imageElement.attr('data-src');
         if (dataSrc) {
@@ -76,6 +77,24 @@ $(document).ready(function() {
         }
     }
     
+    // If mobile, section2 set to d-none
+    // Function to check window size and adjust section2 display
+     function adjustSection2Display() {
+        if ($(window).width() <= 768) {
+            $('.section2').css('display', 'none'); // Assumes that section2 is an ID
+        } else {
+            $('.section2').css('display', 'flex'); // Resets the display property for non-mobile view
+        }
+    }
+
+    // Initial check
+    adjustSection2Display();
+
+    // Adjust visibility on window resize
+    $(window).resize(adjustSection2Display);
+
+
+    // When clicking next, painting updates with its description.
     function updatePainting() {
         const currentPainting = paintings[currentIndex];
         
@@ -90,7 +109,12 @@ $(document).ready(function() {
         $description.find('.description-text').html(currentPainting.description);
     }
 
+    // When clicked on painting, titles and poem fades out, description that had a hidden display, now appears.
     function showDescription() {
+        // If mobile, section2 from d-none to d-flex
+        if ($(window).width() <= 768) {
+            $('.section2').css('display', 'flex');
+        }
         $description.css('pointer-events', 'auto') // Enable pointer events when showing
                 .removeClass('not-active')
                 .css('display', 'block')
@@ -102,7 +126,7 @@ $(document).ready(function() {
         $poem.css('display', 'none');
     }
     
-
+    // Poem-note functions
     function showOverlayAndPoem() {
         $('.dim-overlay').css({
             'display': 'block',
