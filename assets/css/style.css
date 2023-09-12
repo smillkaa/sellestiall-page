@@ -18,6 +18,7 @@
 }
 
 h1 {
+    letter-spacing: 6px;
     font-family: "ivymode", sans-serif;
     font-size: 1.2rem;
     color: rgb(185, 185, 185);
@@ -198,15 +199,5 @@ h2 {
 
     .section2 {
         position: relative;
-    }
-
-}
-
-@media screen and (min-width:768px){
-    h1 {
-        letter-spacing: 6px;
-    }
-    .poem {
-        position:fixed; bottom:0;
     }
 }
