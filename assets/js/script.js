@@ -163,6 +163,9 @@ $(document).ready(function() {
 
 
     $('.exit').click(function() {
+        if ($(window).width() <= 768) {
+            $('body').css('overflow', 'hidden');
+        }
         $description.css('pointer-events', 'none')  // Disable pointer events when hiding
                 .animate({opacity: 0}, 2000, function() {
                     $(this).css('display', 'none').addClass('not-active');
