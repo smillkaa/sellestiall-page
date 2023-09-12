@@ -173,7 +173,7 @@ h2 {
     cursor: pointer;
 }
 
-@media screen and (min-width:768px) {
+@media (min-aspect-ratio: 1/1) {
     .container {
         height: 100vh;
         align-items: center;
@@ -193,14 +193,37 @@ h2 {
 
     .painting {
         width: 75%;
+        height: auto;
     }
    
     .painting:hover, .playlist:hover {
         transform: scale(1.05);
     }
+    .mobile-titles {
+        display: none;
+    }
+    .col-12-5 {
+        flex: 0 0 41.66667%; /* equivalent to col-5 */
+        max-width: 41.66667%; /* equivalent to col-5 */
+    }
+    .col-12-7 {
+        flex: 0 0 58.33333%; /* equivalent to col-md-7 */
+        max-width: 58.33333%; /* equivalent to col-md-7 */
+    }
+    .col-12-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .title-subtitle, .description-text {
+        padding-left:3rem;
+        padding-right:3rem;
+    }
+    .navigation {
+        padding: 0 3rem;
+    }
 }
 
-@media screen and (max-width:768px) {
+@media (max-aspect-ratio: 1/1) {
 
     .titles {
         position: relative;
@@ -210,12 +233,17 @@ h2 {
         padding-right: 30px;
     }
 
+    .desktop-titles {
+        display: none;
+    }
+
     .content-row {
         position: relative;
         padding-top: 30px;
     }
     .painting {
         width: 94%;
+        height: auto;
     }
     .section2 {
         margin-top: 50px;
@@ -223,5 +251,17 @@ h2 {
 
     .poem-centered {
         width: 80%;
+    }
+    .col-12-5, .col-12-7, .col-12-6 {
+        flex: 0 0 100%; /* equivalent to col-12 */
+        max-width: 100%; /* equivalent to col-12 */
+    }
+
+    .title-subtitle, .description-text {
+        padding-left:1rem;
+        padding-right:1rem;
+    }
+    .navigation {
+        padding: 3rem 1rem;
     }
 }
