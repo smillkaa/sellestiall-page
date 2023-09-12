@@ -132,13 +132,6 @@ h2 {
     cursor: pointer;
 }
 
-.titles {
-    position: absolute;   /* Positions the element at a specified position relative to its nearest positioned ancestor */
-    top: 50%;             /* Move the top edge to the vertical middle of the parent */
-    left: 50%;            /* Move the left edge to the horizontal middle of the parent */
-    transform: translate(-50%, -50%);
-}
-
 .description {
     position: relative;
     display: none;
@@ -177,7 +170,55 @@ h2 {
 
 }
 
+.poem {
+    position:fixed; bottom:0;
+}
 
 .poem:hover {
     cursor: pointer;
+}
+
+@media screen and (min-width:768px) {
+    .container {
+        height: 100vh;
+    }
+
+    .titles {
+        position: absolute;   /* Positions the element at a specified position relative to its nearest positioned ancestor */
+        top: 50%;             /* Move the top edge to the vertical middle of the parent */
+        left: 50%;            /* Move the left edge to the horizontal middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .content-row {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .painting {
+        width: 75%;
+    }
+   
+}
+
+@media screen and (max-width:768px) {
+    body, .container {
+        height: 75vh;
+    }
+
+    .titles {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-top: 100px;
+        padding-right: 30px;
+    }
+
+    .content-row {
+        position: relative;
+        top: 30vh;
+    }
+    .painting {
+        width: 100%;
+    }
 }

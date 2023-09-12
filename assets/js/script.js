@@ -1,4 +1,27 @@
 $(document).ready(function() {
+
+ // mobile views
+    // Check initial window width
+    checkWindowSize();
+
+    // Adjust visibility on window resize
+    $(window).resize(checkWindowSize);
+
+    // Handle the click event for .painting
+    $('.painting').on('click', function() {
+        if ($(window).width() <= 768) {
+            $('.section2').css('display', 'flex');
+        }
+    });
+
+    function checkWindowSize() {
+        if ($(window).width() <= 768) {
+            $('.section2').css('display', 'none');
+        } else {
+            $('.section2').css('display', 'flex');
+        }
+    }
+
     const paintings = [
         {
             dataSrc: "https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736386/painting1-progressive_rlpti3.jpg",
@@ -184,3 +207,5 @@ $(document).ready(function() {
         }, 1000);
     });
 });
+
+
