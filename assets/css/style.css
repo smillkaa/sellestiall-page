@@ -136,10 +136,6 @@ h2 {
     pointer-events: none;
 }
 
-.description.not-active {
-    pointer-events: none;
-}
-
 
 /* Poem Animation */
 .dim-overlay {

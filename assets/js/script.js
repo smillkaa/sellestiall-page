@@ -118,7 +118,6 @@ $(document).ready(function() {
             $('body').css('overflow', 'auto');
         }
         $description.css('pointer-events', 'auto') // Enable pointer events when showing
-                .removeClass('not-active')
                 .css('display', 'block')
                 .animate({ opacity: 1 }, 2000);
         $poem.children('.monogram').each(function(i) {
@@ -168,7 +167,7 @@ $(document).ready(function() {
         }
         $description.css('pointer-events', 'none')  // Disable pointer events when hiding
                 .animate({opacity: 0}, 2000, function() {
-                    $(this).css('display', 'none').addClass('not-active');
+                    $(this).css('display', 'none');
                 });
         $poem.css('display', 'block');
         $poem.children('.monogram').each(function(i) {
