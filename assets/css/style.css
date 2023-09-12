@@ -1,4 +1,11 @@
 @font-face {
+    font-family: 'D-DIN DIN-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('D-DIN DIN-Bold'), url('../fonts/D-DIN-Bold.woff') format('woff');
+}
+
+@font-face {
     font-family: 'Monogram';
     src: url('../fonts/Monogram\ Framer\ Demo.ttf') format('opentype');
 }
@@ -159,20 +166,12 @@ h2 {
 }
 
 .poem {
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    white-space: nowrap; /* prevents the content from wrapping */
-    overflow: hidden;    /* hides the overflowing content */
+    position:fixed; bottom:0;
 }
 
 .poem:hover {
     cursor: pointer;
 }
-
 
 @keyframes slowFlash {
     0%, 100% {
@@ -197,10 +196,6 @@ h2 {
     letter-spacing: 1px;
     color: rgb(46, 46, 46); 
     animation: slowFlash 7s infinite; /* This will run the animation every 4 seconds infinitely */
-}
-
-.azu:hover {
-    cursor: pointer;
 }
 
 
@@ -260,7 +255,7 @@ h2 {
         position: relative;
         top: 0;
         right: 0;
-        padding-top: 70px;
+        padding-top: 50px;
         padding-right: 10px;
     }
 
@@ -273,7 +268,7 @@ h2 {
         padding-top: 30px;
     }
     .painting {
-        width: 92%;
+        width: 94%;
         height: auto;
     }
     .section2 {
@@ -282,12 +277,6 @@ h2 {
 
     .poem-centered {
         width: 80%;
-    }
-    .poem {
-        padding: 0 1rem;
-    }
-    .monogram {
-        padding-left: 0;
     }
     .col-12-5, .col-12-7, .col-12-6 {
         flex: 0 0 100%; /* equivalent to col-12 */
@@ -301,8 +290,4 @@ h2 {
     .navigation {
         padding: 3rem 1rem;
     }
-    .monogram {
-        color: rgb(71, 71, 71);
-    }
-     
 }
