@@ -291,3 +291,10 @@ h2 {
         padding: 3rem 1rem;
     }
 }
+
+@media screen and (min-device-aspect-ratio: 4/3), screen and (max-device-aspect-ratio: 3/4) {
+    .painting {
+        padding-top: 30px;
+        width: 80%;
+    }
+}
