@@ -310,6 +310,27 @@ h2 {
         color: rgb(76, 76, 76);
     }
 
+    .scroll-indicator {
+        display: block;
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000; /* Make sure it's above other content */
+    }
+    
+    .text-scroll {
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    .line-scroll {
+        height: 50px; /* adjust as needed */
+        width: 2px; 
+        background-color: #000;
+        margin: 5px auto 0 auto;
+    }
+
 }
 
 /* For iPads */

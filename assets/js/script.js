@@ -68,6 +68,7 @@ $(document).ready(function() {
     const $poem = $('.poem');
     const $parent = $('.parent');
     const $titles = $('.titles');
+    const mobileScreen = window.matchMedia("(max-aspect-ratio: 1/1)").matches;
 
     // Not sure
     function loadImage($imageElement) {
@@ -80,7 +81,7 @@ $(document).ready(function() {
     // If mobile, section2 set to d-none
     // Function to check window size and adjust section2 display
      function adjustSection2Display() {
-        if ($(window).width() <= 768) {
+        if (mobileScreen) {
             $('.section2').css('display', 'none');
             $('body').css('overflow', 'hidden');
         } else {
@@ -110,7 +111,7 @@ $(document).ready(function() {
     // When clicked on painting, titles and poem fades out, description that had a hidden display, now appears.
     function showDescription() {
         // If mobile, section2 from d-none to d-flex
-        if ($(window).width() <= 768) {
+        if (mobileScreen) {
             $('.section2').css('display', 'flex');
             $('body').css('overflow', 'auto');
         }
@@ -161,7 +162,7 @@ $(document).ready(function() {
 
 
     $('.exit').click(function() {
-        if ($(window).width() <= 768) {
+        if (mobileScreen) {
             $('body').css('overflow', 'hidden');
         }
         $description.css('pointer-events', 'none')  // Disable pointer events when hiding
