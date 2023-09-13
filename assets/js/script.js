@@ -31,7 +31,7 @@ $(document).ready(function() {
             title: "Thank you for visiting!",
             subtitle: "UPCOMING | A TASTE OF HADES",
             description: `
-                <p class='text-start description-text-paragraph'>Follow Azutika on Instagram <a class="azu-ig" href="https://instagram.com/azutika/" target="_blank">(@azutika)</a>, and be among the first to see the creation of a new collection of paintings - “A Taste of Hades”. Each original piece will be available for purchase. No reproductions will be made.</p>
+                <p class='text-start description-text-paragraph'>Follow Azutika on Instagram <a class="azu-ig" href="https://instagram.com/azutika/" target="_blank">(@azutika)</a>, and see the creation of a new painting-poem collection - “A Taste of Hades”. Each original piece will be available for purchase. No reproductions will be made.</p>
                 <p class='mt-5 hades-poem'>I feel like my body is tightened by ropes. Held by the grips of desire. Tightening me inwards. Tightening my organs to force out tears and a wail that I cannot shout out loud, it’s embarrassing. His presence in my mind is punishing my body, I carry him on me.</p>
                 
             `
@@ -45,6 +45,7 @@ $(document).ready(function() {
                 <p class='description-text-paragraph'>For those who wish to see their own image on the black canvas, personal paintings can be ordered via email azutika.co@gmail.com</p>
                 <p class='description-text-paragraph'>Custom painting price ranges from 3000USD to 7000USD depending on the painting size and amount of detail desired.</p>
                 <p class='description-text-paragraph'>Questions are welcome via email and Instagram DMs <a class="azu-ig" href="https://instagram.com/azutika/" target="_blank">(@azutika)</a>.</p>
+                
             `
         },
         {
