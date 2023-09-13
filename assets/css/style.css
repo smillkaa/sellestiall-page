@@ -299,6 +299,10 @@ h2 {
     .poem {
         padding-right: 2rem;
     }
+    .monogram {
+        color: rgb(76, 76, 76);
+        font-size: 0.6rem;
+    }
 
 }
 
