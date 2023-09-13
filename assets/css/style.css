@@ -297,7 +297,8 @@ h2 {
         padding: 3rem 1rem;
     }
     .poem {
-        padding-right: 2rem;
+        padding-right: 1.9rem;
+        padding-left: 2px;
     }
     .monogram {
         color: rgb(76, 76, 76);
