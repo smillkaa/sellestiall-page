@@ -166,7 +166,13 @@ h2 {
 }
 
 .poem {
-    position:fixed; bottom:0;
+    position:fixed;
+    bottom:0;
+    white-space: nowrap; /* prevents the content from wrapping */
+    overflow: hidden;    /* hides the overflowing content */
+    left: 0;
+    right: 0;
+    padding-left: 20px; /* padding on the left */
 }
 
 .poem:hover {
@@ -290,6 +296,10 @@ h2 {
     .navigation {
         padding: 3rem 1rem;
     }
+    .poem {
+        padding-right: 2rem;
+    }
+
 }
 
 /* For iPads */
