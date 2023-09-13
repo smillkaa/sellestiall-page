@@ -9,9 +9,9 @@ $(document).ready(function() {
             description: `
                 <p class='text-start description-text-paragraph'>Ancient statue. No face, no hands, existing naked. I am carried away, bewitched, bewildered in those spaces of absence. The mind is fleshing out the details, private fantasies, perversions glossed in.</p>
                 <p class='text-start description-text-paragraph'>A distant beauty. I am not part of the story, still, I will take her body.</p>
-                <p class='text-start description-text-paragraph'>Revealed, untouchable. Unreserved, untouchable. Unreserved, accidental.</p>
+                <p class='text-start description-text-paragraph'>Revealed, untouchable. Unreserved.</p>
                 <p class='text-start description-text-paragraph'>Naked, devoid of romance.</p>
-                <p class='text-start description-text-paragraph'>Of course, I desire to touch her. She lives in painting – a reality separate from mine. As I gaze, as I dwell, compelled, I think, I’d like to melt into hers.</p>
+                <p class='text-start description-text-paragraph'>Of course, I desire to touch her. She lives in painting – a reality separate from mine. As I gaze dwelling and compelled, I think, I’d like to melt into hers.</p>
                 <p class='text-start description-text-paragraph'>Woman, so distant. Obsessed with question, I confront our connection; unsure if she leads a life of her own, or rather solely exists for the frame, no mind, no heart of her own, she is merely a silhouette made from white paint.</p>
                 `
         },
