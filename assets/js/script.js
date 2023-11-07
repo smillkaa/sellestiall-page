@@ -43,7 +43,7 @@ $(document).ready(function() {
             subtitle: "HOW TO ORDER",
             description: `
                 <p class='description-text-paragraph'>For those who wish to see their own image on the black canvas, personal paintings can be ordered via email azutika.co@gmail.com</p>
-                <p class='description-text-paragraph'>Custom painting price ranges from 1500USD to 4500USD depending on the painting size and amount of detail desired.</p>
+                <p class='description-text-paragraph'>Custom painting price ranges from 2000USD to 6000USD depending on the painting size and amount of detail desired.</p>
                 <p class='description-text-paragraph'>Questions are welcome via email and Instagram DMs <a class="azu-ig" href="https://instagram.com/azutika/" target="_blank">(@azutika)</a>.</p>
                 
             `
