@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'D-DIN DIN-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('D-DIN DIN-Bold'), url('../fonts/D-DIN-Bold.woff') format('woff');
+}
+
+* {
+    transition: 0.5s;
+    font-family: "din-2014", sans-serif;
+}
+
+h1 {
+    letter-spacing: 6px;
+    font-family: "ivymode", sans-serif;
+    font-size: 1.2rem;
+    color: rgb(185, 185, 185);
+    font-weight: 400;
+}
+
+h2 {
+    font-family: "ivymode", sans-serif;
+    font-size: 1rem;
+    color: rgb(185, 185, 185);
+}
+
+form {
+    border: 1px solid white;
+    background-color: #141414;
+}
+
+form label, .label {
+    color: white;
+    font-size: 0.8rem;
+}
+
+form input {
+    background-color: #ffffff00;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+input:focus {
+    color: white;
+}
+
+form textarea {
+    background-color: #ffffff00;
+    border: 1px solid white;
+    color: white;
+}
+
+form button {
+    background-color: black;
+    border-radius: 0px;
+    border: none;
+    color: white;
+}
+

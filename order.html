@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DC20WG9E84"></script>
+   <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'G-DC20WG9E84');
+   </script>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta property="og:title" content="Azutika">
+   <meta property="og:description" content="Virtual Art Gallery">
+   <meta property="og:image" content="https://res.cloudinary.com/dyve8u6cx/image/upload/v1690736387/painting2-progressive_mduenl.jpg">
+   <meta property="og:url" content="https://azutika.com/">
+   <meta name="p:domain_verify" content="add4355bb59e6e5992b2da6048f7d7cd"/>
+   <title>Order</title>
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+   <link rel="stylesheet" href="https://use.typekit.net/hum6xbw.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   <link rel="stylesheet" href="assets/css/order.css">
+</head>
+</head>
+<body class="bg-black order-page">
+    <div class="container">
+        <div class="row justify-content-between py-5 px-5 px-md-0">
+            <h1 class="ps-0" style="max-width: max-content;">ORDER</h1>
+            <div style="max-width: max-content; font-size: 0.8rem;" class="d-flex me-0 pe-0">
+                <a href="index.html" style="max-width: max-content;color:rgb(154, 154, 154);" class="me-3">HOME</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 p-5 p-md-0 pe-md-5 text-white">
+                <div>
+                    <h2>The Process</h2>
+                    <p>- Choose your preferred medium: the classic depth of oil or acrylic.</p>
+                    <p>- Decide on the scale that fits your space and the subject that suits your taste.</p>
+                    <p>- Whether it's a tastefully posed nude or another subject entirely, your painting will be an original work designed for you.</p>
+                </div>
+                <div class="mt-5">
+                    <h2>Ordering Your Painting</h2>
+                    <p>Fill out the contact form to discuss your vision and we will work together to ensure the final piece meets your expectations.</p>
+                </div>
+                <div class="mt-5">
+                    <h2>Pricing & Dimensions</h2>
+                    <p>Pricing varies based on the size of the painting and the complexity of details required. We will provide you with a final quote once we discuss and understand your specific needs for the painting. Below, you'll find a guide to our standard prices for various dimensions.</p>
+                    <div class="d-flex row mt-5">
+                        <p class="me-5 col-6 col-md-3">16x24 inches:<br>2000 - 3000 USD</p>
+                        <p class="me-5 col-6 col-md-3">20x28 inches:<br>4000 - 5000 USD</p>
+                        <p class="col-6 col-md-3">24x36 inches:<br>6000 - 7000 USD</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-12 col-md-6 p-4 p-md-5 pt-md-0 pe-md-0">
+                <form action="https://formspree.io/f/xpzgnenl" method="POST" class="p-4">
+                    <div class="d-flex flex-column">
+                        <label for="first-name">First Name <span style="color: red;">*</span></label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                   <div class="d-flex flex-column mt-4">
+                        <label for="last-name">Last Name <span style="color: red;">*</span></label>
+                        <input type="text" id="last-name" name="last-name" required>
+                   </div>
+                   <div class="d-flex flex-column mt-4">
+                        <label for="email">Your email <span style="color: red;">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                   </div>
+                   <div class="mt-4">
+                        <p class="mb-0 label">Select the type of paint: <span style="color: red;">*</span></p>
+
+                        <input type="radio" id="acrylic" name="paint_type" value="acrylic" required>
+                        <label for="acrylic">Acrylic</label><br>
+
+                        <input type="radio" id="oil" name="paint_type" value="oil">
+                        <label for="oil">Oil</label><br>
+                   </div>
+
+                   <div class="mt-4">
+                        <p class="mb-0 label">Select the size: <span style="color: red;">*</span></p>
+
+                        <input type="radio" id="16x24" name="size" value="16x24" required>
+                        <label for="16x24">16x24 in</label><br>
+
+                        <input type="radio" id="20x28" name="size" value="20x28">
+                        <label for="20x28">20x28 in</label><br>
+
+                        <input type="radio" id="24x36" name="size" value="24x36">
+                        <label for="24x36">24x36 in</label><br>
+
+                        <input type="radio" id="other" name="size" value="other">
+                        <label for="other">Other</label><br>
+                   </div>
+                   <div class="d-flex flex-column mt-4">
+                        <label for="order-details">Please share your detailed vision and requirements for your desired painting: <span style="color: red;">*</span></label>
+                        <textarea id="order-details" name="message" rows="6" required></textarea>
+                   </div>
+                    <button class="w-100 mt-3 p-3" type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <div class="container ps-0">
+            <p class="ps-0 p-3 text-center text-md-start" style="color: rgb(111, 111, 111);font-size: 0.8rem;" id="copyright"></p>
+        </div>
+        
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="assets/js/footer.js"></script>
+</body>
+</html>
