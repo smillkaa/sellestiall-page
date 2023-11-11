@@ -39,6 +39,7 @@ form input {
     border: none;
     border-bottom: 1px solid white;
     color: white;
+    border-radius: 0px;
 }
 
 input:focus {
