@@ -59,3 +59,9 @@ form button {
     color: white;
 }
 
+footer p, footer a, footer span {
+    color: rgb(111, 111, 111);
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    
+}
