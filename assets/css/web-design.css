@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;600&display=swap');
+
+* {
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+
+body {
+    background-size: 50%;
+    background-repeat: inherit;
+}
+
+.anchor {
+    display: block;
+    margin-top: 0.6rem;
+    visibility: hidden;
+}
+
+.hero {
+    height: 100vh;
+}
+
+.nav {
+    font-size: 0.7rem;
+}
+
+p, a, li {
+    font-size: 0.8rem
+}
+
+.hero p, h1, .hero h2, footer a {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.hero a, footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero p span {
+    font-weight: 200;
+}
+
+.horizontal-line {
+    border-top: 1px solid white;
+}
+
+.project-gallery {
+    background-color: rgb(245, 243, 239);
+    color: rgb(0, 0, 0);
+}
+
+.project-gallery p, .project-gallery li, .project-gallery a {
+    max-width: max-content;
+    font-size: 0.8rem;
+    font-family: "azo-sans-web", sans-serif;
+    font-weight: 200;
+}
+
+.project-gallery h2 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-family: "condor", sans-serif;
+    font-weight: 400;
+    color: rgb(39, 39, 39);
+  
+}
+
+.project-gallery h3 {
+    font-size: 0.8rem;
+    font-family: "mr-eaves-modern", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: rgb(39, 39, 39);
+    
+   
+}
+
+.project-gallery .col-6 {
+    min-height: 80vh;
+    padding: 0;
+}
+.project-gallery .col-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.specs p, .specs li {
+    margin-bottom: 0;
+}
+
+.project-gallery a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
+.contact-element {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-element a {
+    text-align: right;
+    font-weight: 200;
+    max-width: max-content;
+}
+
+a:active, a:hover {
+    color: grey;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .hero {
+        background: url('../images/IMG_7387.png');
+        background-position: top right 40%;
+        background-size: 180%;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    .project-gallery p, .content li, .content a, .project-gallery li, .content p, .project-gallery a, .project-gallery h3 {
+        font-size: 1rem;
+    }
+    .content {
+        margin: 0 18vw;
+    }
+    .contact-hero .container {
+       margin: 0 0 0 0;
+    }
+    .hero {
+
+        background: url('../images/IMG_7387t.png');
+        background-size: 120%;
+        background-position: right bottom 20%;
+    }
+    .content-home .row {
+        margin: 0 10vw;
+    }
+}
+
+.background {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* For screens with aspect ratio greater than 1:1 */
+@media screen and (min-aspect-ratio: 1001/1000) {
+    .background {
+        background-size: 50%;
+        background-position: top center;
+        width: 100%;
+    }
+}
+
+.container {
+    padding: 0 9.5%;
+}
+
+.col-a {
+    width: 23%;
+    color: rgb(81, 81, 81);
+}
+.col-b {
+    width: 39%;
+    color: rgb(245, 245, 245);
+}
+.col-c {
+    width: 33%;
+    color: rgb(81, 81, 81);
+    margin-left: auto;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.justify-text-last {
+    text-align: justify;
+    text-align-last: justify;
+}
+
+.white-link a {
+    color: white;
+}
+
+.grey-link a {
+    color: rgb(81, 81, 81);
+}
