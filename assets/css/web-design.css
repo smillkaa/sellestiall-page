@@ -35,6 +35,15 @@ p, a, li {
     background-repeat: no-repeat;
 }
 
+/* For screens with aspect ratio greater than 1:1 */
+@media screen and (min-aspect-ratio: 1001/1000) {
+    .background {
+        background-size: 50%;
+        background-position: top center;
+        width: 100%;
+    }
+}
+
 .container {
     padding: 0 9.5%;
 }
@@ -76,6 +85,24 @@ p, a, li {
     background-repeat: repeat;
 }
 
+/* Style the section and make it relative for positioning */
+.video-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+/* Style the video element */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adjust video sizing as needed */
+    z-index: -1; /* Place video behind content */
+}
 
 /* Style the content within the section */
 .content {
@@ -83,7 +110,6 @@ p, a, li {
     z-index: 1; /* Place content in front of the video */
     padding: 20px; /* Adjust padding as needed */
     color: #fff; /* Set text color */
-    padding: 0 0 0 0;
 }
 
 /* Loading screen styles */
@@ -120,67 +146,3 @@ p, a, li {
     color: white;
 }
 
-
-@media screen and (max-aspect-ratio: 1/1) {
-/* Style the section and make it relative for positioning */
-.video-section {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100vh; /* Adjust the height as needed */
-}
-
-/* Style the video element */
-#background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Adjust video sizing as needed */
-    z-index: -1; /* Place video behind content */
-}
-}
-
-@media screen and (min-aspect-ratio: 1001/1000) {
-    p, a, li, div, span {
-        font-size: 1rem
-    }
-
-    .background {
-        background-size: 40%;
-        background-position: top center;
-        width: 100%;
-    }
-    .interception {
-        background-image: url('https://res.cloudinary.com/dyve8u6cx/image/upload/v1702347240/interception1_aixcgj.png');
-        background-size: 40%;
-        background-repeat: repeat-y;
-        background-position: top center;
-    }
-
-    .container {
-        padding: 0 30%;
-    }
-    
-    .video-section {
-        width: 100%;
-        height: 100vh; /* Adjust the height as needed */
-    }
-
-    #background-video {
-        position: fixed;
-        left: 0;
-        width: 100%; /* Adjust video sizing as needed */
-        z-index: -1; /* Place video behind content */
-        top: 60%;
-        transform: translateY(-60%);
-    }
-    .mobile-display {
-        display: none;
-    }
-
-    .cover {
-        margin-top: 10px;
-    }
-}
