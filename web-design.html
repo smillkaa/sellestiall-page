@@ -28,7 +28,7 @@
         </video>
         <div class="content">
             <!-- Your section content goes here -->
-            <div class="text-white background d-flex flex-column justify-content-between" style="background-image: url('https://res.cloudinary.com/dwadiagkb/image/upload/v1701660307/WDL_COVER_SMALL_uspex0.png');">
+            <div class="cover text-white background d-flex flex-column justify-content-between" style="background-image: url('https://res.cloudinary.com/dwadiagkb/image/upload/v1701660307/WDL_COVER_SMALL_uspex0.png');">
    
                 <div class="container" style="padding-top: 35px;">
                     <div class="row" >
@@ -52,7 +52,7 @@
     </section>
     
     <div class="fs-1 text-white background d-flex flex-column justify-content-between interception">
-        <div class="container" style="padding-top: 200px;">
+        <div class="container" style="padding-top: 200px; margin-top: 1px;">
             <div class="row" data-aos="zoom-in">
                 <div class="col-a">001</div>
                 <div class="col-b">TATTOO ARTIST</div>
@@ -183,17 +183,18 @@
                 var aspectRatio = 1875 / 1500; // height / width of your image
 
                 // Check if aspect ratio of the screen is 1:1 or less
-                if (window.innerWidth <= window.innerHeight) {
+                // if (window.innerWidth <= window.innerHeight) {
                     // Set height based on width and aspect ratio for each background element
                     backgrounds.each(function () {
                         $(this).css('min-height', $(this).width() * aspectRatio + 'px');
                     });
-                } else {
-                    var screenWidth = window.innerWidth;
-                    var minScreenHeight = (screenWidth * 0.4) * aspectRatio;
+                // } else {
+                //     var screenWidth = window.innerWidth;
+                //     var minScreenHeight = (screenWidth * 0.4) * aspectRatio;
                     
-                    backgrounds.css('min-height', minScreenHeight + 'px');
-                }
+                //     backgrounds.css('min-height', minScreenHeight + 'px');
+                //     $('.video-section').css('height', minScreenHeight + 'px');
+                // }
             }
 
             // Initial call to set the height

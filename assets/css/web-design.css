@@ -179,4 +179,8 @@ p, a, li {
     .mobile-display {
         display: none;
     }
+
+    .cover {
+        margin-top: 10px;
+    }
 }
