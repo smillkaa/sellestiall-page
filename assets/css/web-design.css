@@ -137,16 +137,8 @@ p, a, li {
     color: white;
 }
 
-/* For screens with aspect ratio greater than 1:1 */
-@media screen and (min-aspect-ratio: 1001/1000) {
-    .background {
-        background-size: 50%;
-        background-position: top center;
-        width: 100%;
-    }
-}
-
-@media screen and (min-aspect-ratio: 1001/1000) {
+/* from ipad view to large desktop */
+@media screen and (min-aspect-ratio: 1001/1000){
     p, a, li, div, span {
         font-size: 1rem
     }
@@ -192,3 +184,48 @@ p, a, li {
         margin-top: 10px;
     }
 }
+
+/* small desktop */
+/* @media screen and (min-width: 1301px) {
+    .container {
+        padding: 0 30%;
+    }
+    
+    .background {
+        background-size: 40%;
+        background-position: top center;
+        width: 100%;
+    }
+    .interception {
+        background-image: url('https://res.cloudinary.com/dyve8u6cx/image/upload/v1702347240/interception1_aixcgj.png');
+        background-size: 40%;
+        background-repeat: repeat-y;
+        background-position: top center;
+    }
+} */
+
+/* just ipad */
+/* @media screen and (min-width: 768px) and (max-width: 1300px) {
+    .container {
+        padding: 0 30%;
+    }
+    
+    .background {
+        background-size: 60%;
+        background-position: top center;
+        width: 100%;
+    }
+    .interception {
+        background-image: url('https://res.cloudinary.com/dyve8u6cx/image/upload/v1702347240/interception1_aixcgj.png');
+        background-size: 60%;
+        background-repeat: repeat-y;
+        background-position: top center;
+    }
+} */
+
+/* large desktop */
+/* @media screen and (min-width: 1808px) {
+    .container {
+        padding: 0 30%;
+    }
+} */
