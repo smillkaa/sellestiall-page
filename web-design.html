@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <div data-aos="zoom-in" class="text-white" style="padding-top: 150px;">
+        <div data-aos="zoom-in" class="text-white mobile-display" style="padding-top: 150px;">
             <p class="text-center">SCROLL DOWN TO VIEW PROJECTS</p>
         </div>
     </section>
@@ -180,6 +180,7 @@
 
             function adjustHeight() {
                 var backgrounds = $('.background');
+                var content =  $('.content');
                 var aspectRatio = 1875 / 1500; // height / width of your image
 
                 // Check if aspect ratio of the screen is 1:1 or less
@@ -193,7 +194,7 @@
                     var minScreenHeight = (screenWidth * 0.4) * aspectRatio;
                     
                     backgrounds.css('min-height', minScreenHeight + 'px');
-                    $('.video-section').css('height', minScreenHeight + 'px');
+                    // $('.video-section').css('height', minScreenHeight + 'px');
                 }
             }
 

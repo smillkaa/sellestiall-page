@@ -81,7 +81,7 @@ p, a, li {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100vh; /* Adjust the height as needed */
+    min-height: 100vh; /* Adjust the height as needed */
 }
 
 /* Style the video element */
@@ -173,6 +173,7 @@ p, a, li {
     
     .video-section {
         width: 100%;
+        min-height: 100%;
     }
 
     #background-video {
