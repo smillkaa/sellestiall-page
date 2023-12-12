@@ -189,8 +189,11 @@
                         $(this).css('min-height', $(this).width() * aspectRatio + 'px');
                     });
                 } else {
-                    // For aspect ratio greater than 1:1, reset to default for each background element
-                    backgrounds.css('min-height', 'auto');
+                    var screenWidth = window.innerWidth;
+                    var minScreenHeight = (screenWidth * 0.4) * aspectRatio;
+                    
+                    backgrounds.css('min-height', minScreenHeight + 'px');
+                    $('.video-section').css('height', minScreenHeight + 'px');
                 }
             }
 

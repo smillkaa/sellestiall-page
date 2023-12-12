@@ -35,15 +35,6 @@ p, a, li {
     background-repeat: no-repeat;
 }
 
-/* For screens with aspect ratio greater than 1:1 */
-@media screen and (min-aspect-ratio: 1001/1000) {
-    .background {
-        background-size: 50%;
-        background-position: top center;
-        width: 100%;
-    }
-}
-
 .container {
     padding: 0 9.5%;
 }
@@ -146,3 +137,57 @@ p, a, li {
     color: white;
 }
 
+/* For screens with aspect ratio greater than 1:1 */
+@media screen and (min-aspect-ratio: 1001/1000) {
+    .background {
+        background-size: 50%;
+        background-position: top center;
+        width: 100%;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1001/1000) {
+    p, a, li, div, span {
+        font-size: 1rem
+    }
+
+    .content {
+        padding: 0px 0 0 0;
+    }
+
+    .background {
+        background-size: 40%;
+        background-position: top center;
+        width: 100%;
+    }
+    .interception {
+        background-image: url('https://res.cloudinary.com/dyve8u6cx/image/upload/v1702347240/interception1_aixcgj.png');
+        background-size: 40%;
+        background-repeat: repeat-y;
+        background-position: top center;
+    }
+
+    .container {
+        padding: 0 30%;
+    }
+    
+    .video-section {
+        width: 100%;
+    }
+
+    #background-video {
+        position: fixed;
+        left: 0;
+        width: 100%; /* Adjust video sizing as needed */
+        z-index: -1; /* Place video behind content */
+        top: 60%;
+        transform: translateY(-60%);
+    }
+    .mobile-display {
+        display: none;
+    }
+
+    .cover {
+        margin-top: 10px;
+    }
+}
