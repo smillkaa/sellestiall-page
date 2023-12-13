@@ -138,7 +138,7 @@ p, a, li {
 }
 
 /* from ipad view to large desktop */
-@media screen and (min-aspect-ratio: 1001/1000){
+@media screen and (min-width: 650px){
     p, a, li, div, span {
         font-size: 1rem
     }

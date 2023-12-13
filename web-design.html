@@ -183,7 +183,7 @@
                 var aspectRatio = 1.25; // height / width of image
 
                 // Check if aspect ratio of the screen is 1:1 or less
-                if (window.innerWidth <= window.innerHeight) {
+                if (window.innerWidth <= 649) {
                     // Set height based on width and aspect ratio for each background element
                     backgrounds.each(function () {
                         $(this).css('min-height', $(this).width() * aspectRatio + 'px');
