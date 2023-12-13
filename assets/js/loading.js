@@ -33,6 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector(".loading-screen").style.display = "none";
                 // Display the content once the loading screen is hidden
                 document.querySelector(".content").style.display = "block";
+            
+                // Call adjustHeight after all assets are loaded
+                adjustHeight();
+
+                // Bind adjustHeight to window resize event after assets are loaded
+                $(window).resize(adjustHeight);
+            
             }, 500); // Adjust the duration to match your animation time
         }
     }
@@ -44,8 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
         asset.onload = updateLoadingBar;
         asset.onerror = updateLoadingBar; // Handle errors if needed
     });
-    // adjustments
-    $(window).resize(adjustHeight);
 
     function adjustHeight() {
         console.log("adjustHeight called");
