@@ -188,6 +188,13 @@
                     backgrounds.each(function () {
                         $(this).css('min-height', $(this).width() * aspectRatio + 'px');
                     });
+                } else if (650 <= window.innerWidth && window.innerWidth <= 1100 ) {
+                    var screenWidth = window.innerWidth;
+                    var minScreenHeight = (screenWidth * 0.7) * aspectRatio;
+                    var interceptions = $('.interception');
+                    
+                    backgrounds.css('min-height', minScreenHeight + 'px');
+                    interceptions.css('min-height', minScreenHeight + 'px');
                 } else {
                     var screenWidth = window.innerWidth;
                     var minScreenHeight = (screenWidth * 0.4) * aspectRatio;
