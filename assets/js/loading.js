@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "https://res.cloudinary.com/dyve8u6cx/image/upload/v1702348040/TATTOO_CEREMONY_dgs6c6.jpg",
         "https://res.cloudinary.com/dyve8u6cx/image/upload/v1702348129/ABOUT_lcmry6.jpg",
         "https://res.cloudinary.com/dyve8u6cx/image/upload/v1702352051/IMG_5838_p8lqze.png"
-        // Add more asset URLs as needed
+       
     ];
 
     // Counter to track loaded assets
@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $(window).resize(adjustHeight);
 
     function adjustHeight() {
+        console.log("adjustHeight called");
         var backgrounds = $('.background');
         var aspectRatio = 1.25; // height / width of image
 
