@@ -18,7 +18,7 @@
         <div class="loader">
             <div class="loader-bar"></div>
         </div>
-        
+        <p style="color: white;margin-top: 20px;">THANK YOU FOR YOUR PATIENCE &#128568;</p>
     </div>
 
     <section class="video-section">
@@ -180,8 +180,7 @@
 
             function adjustHeight() {
                 var backgrounds = $('.background');
-                var content =  $('.content');
-                var aspectRatio = 1875 / 1500; // height / width of your image
+                var aspectRatio = 1.25; // height / width of image
 
                 // Check if aspect ratio of the screen is 1:1 or less
                 if (window.innerWidth <= window.innerHeight) {
@@ -194,7 +193,6 @@
                     var minScreenHeight = (screenWidth * 0.4) * aspectRatio;
                     
                     backgrounds.css('min-height', minScreenHeight + 'px');
-                    // $('.video-section').css('height', minScreenHeight + 'px');
                 }
             }
 
