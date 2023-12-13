@@ -174,46 +174,6 @@
     </div>
     <script src="assets/js/loading.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(window).resize(adjustHeight);
-
-            function adjustHeight() {
-                var backgrounds = $('.background');
-                var aspectRatio = 1.25; // height / width of image
-
-                $('.interception-img').each(function () {
-                        // Assuming each .interception-img has an image as a direct child
-                        var imageHeight = $(this).find('img').height();
-                        $(this).css('height', imageHeight + 'px');
-                });
-
-                // Check if aspect ratio of the screen is 1:1 or less
-                if (window.innerWidth <= 649) {
-                    // Set height based on width and aspect ratio for each background element
-                    backgrounds.each(function () {
-                        $(this).css('min-height', $(this).width() * aspectRatio + 'px');
-                    });
-                    
-                } else if (650 <= window.innerWidth && window.innerWidth <= 1100 ) {
-                    var screenWidth = window.innerWidth;
-                    var minScreenHeight = (screenWidth * 0.7) * aspectRatio;
-                    
-                    backgrounds.css('min-height', minScreenHeight + 'px');
-                    
-                } else if (1100 < window.innerWidth) {
-                    var screenWidth = window.innerWidth;
-                    var minScreenHeight = (screenWidth * 0.4) * aspectRatio;
-                    
-                    backgrounds.css('min-height', minScreenHeight + 'px');
-                    
-                }
-            }
-
-            // Initial call to set the height
-            adjustHeight();
-        });
-    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
