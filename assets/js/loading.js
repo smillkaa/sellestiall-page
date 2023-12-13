@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Assuming each .interception-img has an image as a direct child
                 var imageHeight = $(this).find('img').height();
                 $(this).css('height', imageHeight + 'px');
+                console.log("interception called");
         });
 
         // Check if aspect ratio of the screen is 1:1 or less
@@ -70,12 +71,14 @@ document.addEventListener("DOMContentLoaded", function () {
             var minScreenHeight = (screenWidth * 0.7) * aspectRatio;
             
             backgrounds.css('min-height', minScreenHeight + 'px');
+            console.log("ipad is triggered");
             
         } else if (1100 < window.innerWidth) {
             var screenWidth = window.innerWidth;
             var minScreenHeight = (screenWidth * 0.4) * aspectRatio;
             
             backgrounds.css('min-height', minScreenHeight + 'px');
+            console.log("large screen triggered");
             
         }
     }
